@@ -13,93 +13,152 @@
    
 
 <body>
+    <header class="fixed z-10 w-screen">
+        <nav class="text-white transition-all duration-500 ease-in-out bg-no-repeat " style="background-color:#135ca1;">
+            <div class="items-center lg:justify-between justify-around max-w-screen-xl px-2 py-2 mx-auto lg:flex sm:px-[52px] w-auto">
+                <div class="flex justify-between px-1">
+                    <div>
+                        <a href="./index.html" class="inline-flex w-48 py-2 mx-auto text-xl font-bold tracking-wider text-white uppercase sm:px-0 sm:w-60">
+                            <img src="../assets/pp_logo.webp" alt="logo" height="auto">
+                        </a>
+                    </div>
+    
+                    <div class="items-center my-auto lg:hidden ">
+                        <nav>
+                            <ul>
+                                <li class="flex items-center gap-2 px-1 py-1 bg-white rounded-full">
+                                    <!--menu bar-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="gray" class="w-6 h-6" id="menuIcon"
+                                        onclick="toggleMobileMenu()">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                                    </svg>
+    
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+    
+                <div class="items-center hidden w-full py-2 my-auto nav-links lg:inline-flex lg:w-auto lg:mt-0 lg:py-0 sm:px-4 "
+                    id="mainMenu">
+                    <div class="py-2 mx-auto my-auto bg-white rounded lg:inline-flex lg:w-auto lg:mt-0 lg:bg-inherit sm:px-0 ms-2 sm:ms-0 me-2 sm:me-0" id="mainMenu">
+                        <ul class="flex flex-col w-full space-y-0.5 lg:w-auto lg:flex-row lg:space-y-0  lg:space-x-1 transition-all duration-300 ease-in-out font-afacad text-lg[px] ls-2 my-auto mx-auto sm:ms-3 lg:ms-0">
+                            <li class="">
+                                <a href="./index.html"
+                                    class="flex px-4 py-2 text-gray-500 duration-300 ease-in-out rounded-md lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <button
+                                    class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none focus:outline-none lg:hover:text-white lg:text-gray-300 hover:text-blue-500"
+                                    id="dropdownToggle1">
+                                    Job Training<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <div class="right-0 hidden w-full p-2 px-5 rounded-md lg:absolute dropdown-menu lg:w-72 lg:px-0 "
+                                    id="dropdownMenu1">
+                                    <div
+                                        class="grid p-4 space-y-2 font-sans transform bg-white border-t-4 border-blue-500  shadow lg:translate-x-36 sm:-translate-x-3 lg:translate-y-2.5 rounded-b xl:ml-5">
+                                        <div class="grid-cols-1">
+                                            <ul class="space-y-2 text-[15px]">
+                                                
+                                                <li>
+                                                    <a href="./fullstack-java.html"
+                                                        class="block py-1 text-gray-500 lg:hover:text-blue-600">
+                                                        FullstackJava with placement
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./curriculum.html"
+                                                        class="block py-1 text-gray-500 hover:text-blue-600">
+                                                        Curriculum
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./fees.html"
+                                                        class="block py-1 text-gray-500 hover:text-blue-600">
+                                                        Fee Structure
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <button href="#"
+                                    class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none lg:text-gray-300 focus:outline-none lg:hover:text-white hover:text-blue-500"
+                                    id="dropdownToggle">
+                                    Resources<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <div class="right-0 hidden p-2 px-5 lg:absolute dropdown-menu lg:px-0" id="dropdownMenu">
+                                    <div
+                                        class="p-4 space-y-2 font-sans transform bg-white rounded-b border-t-4 border-blue-500  shadow lg:translate-x-28 sm:-translate-x-3 lg:translate-y-2.5">
+                                        <ul class=" text-[15px] lg:w-48">
+                                        <ul class="space-y-2 text-[15px] lg:w-48">
+                                            <li>
+                                                <a href="./telegram.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Telegram Channel
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Learning Portal
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./free-practice-tests.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Free Practice Tests
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="firstacademy.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Free IELTS & GRE Tests
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>                            
+                            <li class="">
+                                <a href="./hire-from-us.html"
+                                    class="flex px-4 py-2 text-gray-500 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                    Hire from us!
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./contactus.html" class="button bg-[#ED4C78] px-5 py-2.5 rounded hover:translate-y-[-4px] duration-500  text-sm font-semibold mx-3 lg:mx-0 lg:my-auto mb-2 lg:mb-0 block my-8">Talk to us</a>
 
-    <header>
-        <nav class="md:px-20 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600" style="background-color: #135ca1;">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="./index.html" class="flex items-center ">
-                <img src="../assets/pp_logo.webp" class="logo" width="200px" height="100px" class="h-8 mr-3"  alt="Flowbite Logo">
-            </a>
-            <div class="flex md:order-2">
-                <button type="button" class="text-white bg-red-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 md:py-2 text-center mr-3 md:mr-0 talk-btn">Talk to us</button>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:border-gray-700">
-            <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:p-0" aria-current="page">Home</a>
-            </li>
-            <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:p-0 md:w-auto ">Job Training <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-          </svg></button>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                          <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Fullstack Java with Placement</a>
-                          </li>
-                          <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Curriculum</a>
-                          </li>
-                          <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Fee Structure</a>
-                          </li>
+                            </li>   
                         </ul>
                     </div>
-            </li>
-            <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:p-0 md:w-aut">Resources <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-          </svg></button>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                          <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Telegram Channel</a>
-                          </li>
-                          <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Learning Portal</a>
-                          </li>
-                          <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Free Practice Tests</a>
-                          </li>
-                        </ul>
-                        <div class="py-1">
-                          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Free IELTS & GRE Test</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:p-0">Hire from us!</a>
-                </li>
-            </ul>
+                </div>    
             </div>
-            </div>
-        </nav> 
+        </nav>
     </header>
 
-
-
-
-
-    <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-2 ">
+    <div class="grid gap-2 lg:grid-cols-2 md:grid-cols-1 ">
        <div class="">
-        <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+        <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
             <div class="grid grid-cols-2 gap-8">
         
                 <div>
-                   <img class="rounded-lg my-8" src="../assets/blog1.webp" width="300px" height="300px" alt="hi">
+                   <img class="my-8 rounded-lg" src="../assets/blog1.webp" width="300px" height="300px" alt="hi">
                 </div>
                 <div class="mt-2">
                     <h2 class="text-blue-700">Coding for Interviews</h2>
-                    <h1 class="dark:text-black font-bold"> Key Design Patterns in Software</h1>
-                    <h1 class="dark:text-black font-bold ">Development</h1>
+                    <h1 class="font-bold dark:text-black"> Key Design Patterns in Software</h1>
+                    <h1 class="font-bold dark:text-black ">Development</h1>
                     <p>In the field of software development, writing maintainable, scalable, and flexible 
                         code is crucial for developing effective applications. Design patterns offer tested 
                         solutions to recurrent issues tha...</p>
@@ -110,15 +169,15 @@
             </div>  
             </div>
 
-            <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+            <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                 <div class="grid grid-cols-2 gap-8">
             
                     <div>
-                       <img class="rounded-lg my-8" src="../assets/blog2.webp" width="300px" height="300px" alt="hi">
+                       <img class="my-8 rounded-lg" src="../assets/blog2.webp" width="300px" height="300px" alt="hi">
                     </div>
                     <div class="mt-2">
                         <h2 class="text-blue-700">Coding for Interviews</h2>
-                        <h1 class="dark:text-black font-bold">Mastering Machine Learning Frameworks</h1>
+                        <h1 class="font-bold dark:text-black">Mastering Machine Learning Frameworks</h1>
                         <p>In recent years, the popularity and development of machine learning has met an 
                             unprecedented demand. With increasing data and processing power, machine learning
                              has become an important technology in v...</p>
@@ -129,15 +188,15 @@
                 </div>  
                 </div>
 
-                <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                     <div class="grid grid-cols-2 gap-8">
                 
                         <div>
-                           <img class="rounded-lg my-8" src="../assets/blog3.webp" width="300px" height="300px" alt="hi">
+                           <img class="my-8 rounded-lg" src="../assets/blog3.webp" width="300px" height="300px" alt="hi">
                         </div>
                         <div class="mt-2">
                             <h2 class="text-blue-700">General</h2>
-                            <h1 class="dark:text-black font-bold">The Top Programming Languages For Game Development</h1>
+                            <h1 class="font-bold dark:text-black">The Top Programming Languages For Game Development</h1>
                             <p>Game creation is an exciting and dynamic industry that combines technological know-how with
                                  creative flair. An extensive codebase created in programming languages designed exclusively
                                   for game creatio...</p>
@@ -148,15 +207,15 @@
                     </div>  
                     </div>
 
-                    <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                    <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                         <div class="grid grid-cols-2 gap-8">
                     
                             <div>
-                               <img class="rounded-lg my-8" src="../assets/blog4.webp" width="300px" height="300px" alt="hi">
+                               <img class="my-8 rounded-lg" src="../assets/blog4.webp" width="300px" height="300px" alt="hi">
                             </div>
                             <div class="mt-2">
                                 <h2 class="text-blue-700">General</h2>
-                                <h1 class="dark:text-black font-bold">Choosing The Right Mobile App Development FrameWork</h1>
+                                <h1 class="font-bold dark:text-black">Choosing The Right Mobile App Development FrameWork</h1>
                                 <p>Developers are faced with the constant task of creating apps that work well, provide a great 
                                     user experience, and adapt to multiple platforms in the evolution of the mobile app design environment.
                                      To ...</p>
@@ -167,15 +226,15 @@
                         </div>  
                         </div>
 
-                        <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                        <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                             <div class="grid grid-cols-2 gap-8">
                         
                                 <div>
-                                   <img class="rounded-lg my-8" src="../assets/blog5.webp" width="300px" height="300px" alt="hi">
+                                   <img class="my-8 rounded-lg" src="../assets/blog5.webp" width="300px" height="300px" alt="hi">
                                 </div>
                                 <div class="mt-2">
                                     <h2 class="text-blue-700">General</h2>
-                                    <h1 class="dark:text-black font-bold">Creating Amazing Websites with These
+                                    <h1 class="font-bold dark:text-black">Creating Amazing Websites with These
                                          Web Development Frameworks And Libraries</h1>
                                     <p>Since the early days of static HTML pages, web development has advanced
                                          significantly. The development of dynamic and interactive online applications today 
@@ -187,15 +246,15 @@
                             </div>  
                             </div>
 
-                            <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                            <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                 <div class="grid grid-cols-2 gap-8">
                             
                                     <div>
-                                       <img class="rounded-lg my-8" src="../assets/blog6.webp" width="300px" height="300px" alt="hi">
+                                       <img class="my-8 rounded-lg" src="../assets/blog6.webp" width="300px" height="300px" alt="hi">
                                     </div>
                                     <div class="mt-2">
                                         <h2 class="text-blue-700">General</h2>
-                                        <h1 class="dark:text-black font-bold">The Ultimate Career Path For DevOps Professionals</h1>
+                                        <h1 class="font-bold dark:text-black">The Ultimate Career Path For DevOps Professionals</h1>
                                         <p>In the fast-paced and ever-evolving world of software development, the emergence of DevOps has revolutionized 
                                             the way teams build, test, and deploy applications. DevOps practices bridge the gap betwee...</p>
                                             <button class="transition ease-in-out  text-white font-bold delay-150 bg-blue-500 rounded-lg py-3 px-8  mt-4 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 ...">
@@ -205,15 +264,15 @@
                                 </div>  
                                 </div>
 
-                                <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                     <div class="grid grid-cols-2 gap-8">
                                 
                                         <div>
-                                           <img class="rounded-lg my-8" src="../assets/blog7.webp" width="300px" height="300px" alt="hi">
+                                           <img class="my-8 rounded-lg" src="../assets/blog7.webp" width="300px" height="300px" alt="hi">
                                         </div>
                                         <div class="mt-2">
                                             <h2 class="text-blue-700">Interview Skills</h2>
-                                            <h1 class="dark:text-black font-bold">Boost Your Coding Skills With These Proven Tips And Techniques</h1>
+                                            <h1 class="font-bold dark:text-black">Boost Your Coding Skills With These Proven Tips And Techniques</h1>
                                             <p>In today's rapidly changing world, coding skills are more important than ever. Whether you're a computer
                                                  science student or just wanting to learn more about programming, improving your coding skills...</p>
                                                 <button class="transition ease-in-out  text-white font-bold delay-150 bg-blue-500 rounded-lg py-3 px-8  mt-4 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 ...">
@@ -223,15 +282,15 @@
                                     </div>  
                                     </div>
 
-                                    <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                    <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                         <div class="grid grid-cols-2 gap-8">
                                     
                                             <div>
-                                               <img class="rounded-lg my-8" src="../assets/blog8.webp" width="300px" height="300px" alt="hi">
+                                               <img class="my-8 rounded-lg" src="../assets/blog8.webp" width="300px" height="300px" alt="hi">
                                             </div>
                                             <div class="mt-2">
                                                 <h2 class="text-blue-700">General</h2>
-                                                <h1 class="dark:text-black font-bold">How Technology Is Transforming The Business Landscape</h1>
+                                                <h1 class="font-bold dark:text-black">How Technology Is Transforming The Business Landscape</h1>
                                                 <p>In the dynamic environment of the business world, technology has become an important factor for
                                                      success and development. From small startups to large global organizations, businesses of 
                                                      all sizes are ...</p>
@@ -242,15 +301,15 @@
                                         </div>  
                                         </div>
 
-                                        <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                        <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                             <div class="grid grid-cols-2 gap-8">
                                         
                                                 <div>
-                                                   <img class="rounded-lg my-8" src="../assets/blog9.webp" width="300px" height="300px" alt="hi">
+                                                   <img class="my-8 rounded-lg" src="../assets/blog9.webp" width="300px" height="300px" alt="hi">
                                                 </div>
                                                 <div class="mt-2">
                                                     <h2 class="text-blue-700">General</h2>
-                                                    <h1 class="dark:text-black font-bold">The Rise Of Al:Separating Fact From Fiction</h1>
+                                                    <h1 class="font-bold dark:text-black">The Rise Of Al:Separating Fact From Fiction</h1>
                                                     <p>The last few years have seen an increase in the development and acceptance of artificial
                                                          intelligence (AI) across industries. From artificial intelligence, virtual assistants and
                                                           self-driving cars to...</p>
@@ -261,15 +320,15 @@
                                             </div>  
                                             </div>
 
-                                            <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                            <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                                 <div class="grid grid-cols-2 gap-8">
                                             
                                                     <div>
-                                                       <img class="rounded-lg my-8" src="../assets/blog10.webp" width="300px" height="300px" alt="hi">
+                                                       <img class="my-8 rounded-lg" src="../assets/blog10.webp" width="300px" height="300px" alt="hi">
                                                     </div>
                                                     <div class="mt-2">
                                                         <h2 class="text-blue-700">General</h2>
-                                                        <h1 class="dark:text-black font-bold">How To Optimize Ypur Website For Search Engines</h1>
+                                                        <h1 class="font-bold dark:text-black">How To Optimize Ypur Website For Search Engines</h1>
                                                         <p>In the current digital era, having a strong online presence is essential for both individuals 
                                                             and businesses. An important factor in increasing a website's visibility and drawing in organic visitors i...</p>
                                                             <button class="transition ease-in-out  text-white font-bold delay-150 bg-blue-500 rounded-lg py-3 px-8  mt-4 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 ...">
@@ -279,15 +338,15 @@
                                                 </div>  
                                                 </div>
 
-                                                <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                                <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                                     <div class="grid grid-cols-2 gap-8">
                                                 
                                                         <div>
-                                                           <img class="rounded-lg my-8" src="../assets/blog11.webp" width="300px" height="300px" alt="hi">
+                                                           <img class="my-8 rounded-lg" src="../assets/blog11.webp" width="300px" height="300px" alt="hi">
                                                         </div>
                                                         <div class="mt-2">
                                                             <h2 class="text-blue-700">General</h2>
-                                                            <h1 class="dark:text-black font-bold">10 Low-Cost Business Ideas For Aspiring Entrepreneurs</h1>
+                                                            <h1 class="font-bold dark:text-black">10 Low-Cost Business Ideas For Aspiring Entrepreneurs</h1>
                                                             <p>Starting a business can be an exciting venture full of opportunities, challenges and potential for\
                                                                  success. But choosing the right business model is critical to the growth and long-term success of you...</p>
                                                                 <button class="transition ease-in-out  text-white font-bold delay-150 bg-blue-500 rounded-lg py-3 px-8  mt-4 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 ...">
@@ -297,15 +356,15 @@
                                                     </div>  
                                                     </div>
 
-                                                    <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                                    <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                                         <div class="grid grid-cols-2 gap-8">
                                                     
                                                             <div>
-                                                               <img class="rounded-lg my-8" src="../assets/blog12.webp" width="300px" height="300px" alt="hi">
+                                                               <img class="my-8 rounded-lg" src="../assets/blog12.webp" width="300px" height="300px" alt="hi">
                                                             </div>
                                                             <div class="mt-2">
                                                                 <h2 class="text-blue-700">General</h2>
-                                                                <h1 class="dark:text-black font-bold">Secrets Of High-Earning Freelance Developers</h1>
+                                                                <h1 class="font-bold dark:text-black">Secrets Of High-Earning Freelance Developers</h1>
                                                                 <p>Freelance development can be an exciting and fulfilling career choice. It gives you the 
                                                                     freedom to plan your own time, choose your own activities and run your own business. However,
                                                                      freelancing has it...</p>
@@ -316,15 +375,15 @@
                                                         </div>  
                                                         </div>
 
-                                                        <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                                        <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                                             <div class="grid grid-cols-2 gap-8">
                                                         
                                                                 <div>
-                                                                   <img class="rounded-lg my-8" src="../assets/blog13.webp" width="300px" height="300px" alt="hi">
+                                                                   <img class="my-8 rounded-lg" src="../assets/blog13.webp" width="300px" height="300px" alt="hi">
                                                                 </div>
                                                                 <div class="mt-2">
                                                                     <h2 class="text-blue-700">General</h2>
-                                                                    <h1 class="dark:text-black font-bold">Instagram Threads:A Creative Way To Engage Followers</h1>
+                                                                    <h1 class="font-bold dark:text-black">Instagram Threads:A Creative Way To Engage Followers</h1>
                                                                     <p>Threads, was just unveiled by Mark Zuckerberg in its first iteration. Whether you're a creator 
                                                                         or just a casual poster, Threads provides a brand-new, distinct location for in-the-moment updates and op...</p>
                                                                         <button class="transition ease-in-out  text-white font-bold delay-150 bg-blue-500 rounded-lg py-3 px-8  mt-4 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 ...">
@@ -334,15 +393,15 @@
                                                             </div>  
                                                             </div>
 
-                                                            <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                                            <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                                                 <div class="grid grid-cols-2 gap-8">
                                                             
                                                                     <div>
-                                                                       <img class="rounded-lg my-8" src="../assets/blog14.webp" width="200px" height="200px" alt="hi">
+                                                                       <img class="my-8 rounded-lg" src="../assets/blog14.webp" width="200px" height="200px" alt="hi">
                                                                     </div>
                                                                     <div class="mt-2">
                                                                         <h2 class="text-blue-700">General</h2>
-                                                                        <h1 class="dark:text-black font-bold">| Project Ideas For Beginners</h1>
+                                                                        <h1 class="font-bold dark:text-black">| Project Ideas For Beginners</h1>
                                                                         <p>In today's fast-paced world of ever-changing technology, 
                                                                             it is important for beginners to gain hands-on knowledge and 
                                                                             apply their theoretical knowledge in real life. world situations Matter - World S...</p>
@@ -352,13 +411,13 @@
                                                                    </div>   
                                                                 </div>  
                                                                 </div>
-                                                                <div class="box-content h-100 w-384 p-2 shadow-xl rounded-lg ml-32 mt-6">
+                                                                <div class="box-content p-2 mt-6 ml-32 rounded-lg shadow-xl h-100 w-384">
                                                                     <div class="grid grid-cols-1 gap-8">
                                                                 
                                                                         
                                                                         <div class="mt-2">
                                                                             <h2 class="text-blue-700">Interview Skills</h2>
-                                                                            <h1 class="dark:text-black font-bold">| Creative Thinking</h1>
+                                                                            <h1 class="font-bold dark:text-black">| Creative Thinking</h1>
                                                                             <p>Creative thinking is the capability to look differently at things, and solve problems in a new way. 
                                                                                 Creative thinking skills are definitely not just for some professions. Everyone can benefit from creative 
                                                                                 thinking from time to time. Most problems might require the approach that has never been tried before. So,
@@ -376,9 +435,9 @@
                                                                    
 
   <nav aria-label="Page navigation example ">
-    <ul class="flex items-center -space-x-px h-10 text-base ml-32 my-8">
+    <ul class="flex items-center h-10 my-8 ml-32 -space-x-px text-base">
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <a href="#" class="flex items-center justify-center h-10 px-4 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
           <span class="sr-only">Previous</span>
           <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
@@ -386,48 +445,48 @@
         </a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">6</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">6</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">7</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">7</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">8</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">8</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">9</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">9</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">10</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">10</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">15</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">15</a>
       </li>
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">16</a>
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white">16</a>
       </li>
     
      
       <li>
-        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <a href="#" class="flex items-center justify-center h-10 px-4 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-white-100 hover:text-gray-700 dark:bg-white-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
           <span class="sr-only">Next</span>
           <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
@@ -466,20 +525,20 @@
     </button>
 </form>
 
-<h2 class="text-blue-700 text-2xl font-bold ml-4 my-4">| Categories</h2>
+<h2 class="my-4 ml-4 text-2xl font-bold text-blue-700">| Categories</h2>
     <div class="ml-4">
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2 mt-2 ">Coding for interviews <span class="bg-blue-500 rounded-full text-white p-1">6</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">General <span class="bg-blue-500 rounded-full text-white p-1">21</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">Interview Skills <span class="bg-blue-500 rounded-full text-white p-1">15</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">Job Openings <span class="bg-blue-500 rounded-full text-white p-1">129</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">Placement Prep <span class="bg-blue-500 rounded-full text-white p-1">9</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">Quantitative Aptitude <span class="bg-blue-500 rounded-full text-white p-1">18</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">Reasoning Ability <span class="bg-blue-500 rounded-full text-white p-1">12</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">Recruitment Process <span class="bg-blue-500 rounded-full text-white p-1">13</span></div>
-    <div class="bg-white text-gray-700 border-2 border-gray-300 py-2 px-2">Verbal Ability <span class="bg-blue-500 rounded-full text-white p-1">10</span></div>
+    <div class="px-2 py-2 mt-2 text-gray-700 bg-white border-2 border-gray-300 ">Coding for interviews <span class="p-1 text-white bg-blue-500 rounded-full">6</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">General <span class="p-1 text-white bg-blue-500 rounded-full">21</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">Interview Skills <span class="p-1 text-white bg-blue-500 rounded-full">15</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">Job Openings <span class="p-1 text-white bg-blue-500 rounded-full">129</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">Placement Prep <span class="p-1 text-white bg-blue-500 rounded-full">9</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">Quantitative Aptitude <span class="p-1 text-white bg-blue-500 rounded-full">18</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">Reasoning Ability <span class="p-1 text-white bg-blue-500 rounded-full">12</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">Recruitment Process <span class="p-1 text-white bg-blue-500 rounded-full">13</span></div>
+    <div class="px-2 py-2 text-gray-700 bg-white border-2 border-gray-300">Verbal Ability <span class="p-1 text-white bg-blue-500 rounded-full">10</span></div>
 
 </div>
-    <h2 class="text-blue-500 text-2xl font-bold ml-4 my-4">| Popular Posts</h2>
+    <h2 class="my-4 ml-4 text-2xl font-bold text-blue-500">| Popular Posts</h2>
 
 
 

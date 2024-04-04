@@ -7,120 +7,182 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav class="fixed w-full z-20 top-0 left-0" style="background-color: #135ca1;">
-            <div class="max-w-screen-xl p-4 sm:px-16 flex flex-wrap items-center justify-between mx-auto">
-            <a href="./index.html" class="flex items-center ">
-                <img src="../assets/pp_logo.webp" class="logo" width="200px" height="auto"  alt="Logo">
-            </a>
-            <div class="flex md:order-2">
-                <button type="button" class="text-white bg-red-600 focus:ring-4 focus:outline-none font-medium rounded-lg text-md hover:bg-red-800 hover:outline-1 px-4 md:py-2 text-center mr-3 md:mr-0 talk-btn ">Talk to us</button>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden  bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium lg:text-lg rounded-lg md:flex-row md:space-x-4 md:mt-0 md:border-0  dark:border-gray-700">
-                <li class="hover:bg-blue-500 px-4 py-2 rounded">
-                    <button class="hover:bg-sky-800/75 hover:bg-opacity-75 rounded">
-                        <a href="./index.html" class="block py-2 pl-3 pr-4 text-white rounded md:p-0  transition duration-200 ease-in" aria-current="page">Home</a>
-                    </button>
-                </li>
-                <li class="hover:bg-blue-500 px-4 py-2 rounded">
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:p-0  transition duration-200 ease-in">Job Training <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-            </svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Fullstack Java with Placement</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Curriculum</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Fee Structure</a>
-                            </li>
+    <header class="fixed z-10 w-screen">
+        <nav class="text-white transition-all duration-500 ease-in-out bg-no-repeat " style="background-color:#135ca1;">
+            <div class="items-center lg:justify-between justify-around max-w-screen-xl px-2 py-2 mx-auto lg:flex sm:px-[52px] w-auto">
+                <div class="flex justify-between px-1">
+                    <div>
+                        <a href="./index.html" class="inline-flex w-48 py-2 mx-auto text-xl font-bold tracking-wider text-white uppercase sm:px-0 sm:w-60">
+                            <img src="../assets/pp_logo.webp" alt="logo" height="auto">
+                        </a>
+                    </div>
+    
+                    <div class="items-center my-auto lg:hidden ">
+                        <nav>
+                            <ul>
+                                <li class="flex items-center gap-2 px-1 py-1 bg-white rounded-full">
+                                    <!--menu bar-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="gray" class="w-6 h-6" id="menuIcon"
+                                        onclick="toggleMobileMenu()">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                                    </svg>
+    
+                                </li>
                             </ul>
-                        </div>
-                </li>
-                <li class="hover:bg-blue-500 px-4 py-2 rounded">
-                    <button id="dropdownNavbarLink1" data-dropdown-toggle="dropdownNavbar1" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:p-0 md:w-auto transition duration-200 ease-in">Resources <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-            </svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownNavbar1" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"    aria-labelledby="dropdownLargeButton">
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Telegram Channel</a>
+                        </nav>
+                    </div>
+                </div>
+    
+                <div class="items-center hidden w-full py-2 my-auto nav-links lg:inline-flex lg:w-auto lg:mt-0 lg:py-0 sm:px-4 "
+                    id="mainMenu">
+                    <div class="py-2 mx-auto my-auto bg-white rounded lg:inline-flex lg:w-auto lg:mt-0 lg:bg-inherit sm:px-0 ms-2 sm:ms-0 me-2 sm:me-0" id="mainMenu">
+                        <ul class="flex flex-col w-full space-y-0.5 lg:w-auto lg:flex-row lg:space-y-0  lg:space-x-1 transition-all duration-300 ease-in-out font-afacad text-lg[px] ls-2 my-auto mx-auto sm:ms-3 lg:ms-0">
+                            <li class="">
+                                <a href="./index.html"
+                                    class="flex px-4 py-2 text-gray-500 duration-300 ease-in-out rounded-md lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="relative">
+                                <button
+                                    class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none focus:outline-none lg:hover:text-white lg:text-gray-300 hover:text-blue-500"
+                                    id="dropdownToggle1">
+                                    Job Training<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <div class="right-0 hidden w-full p-2 px-5 rounded-md lg:absolute dropdown-menu lg:w-72 lg:px-0 "
+                                    id="dropdownMenu1">
+                                    <div
+                                        class="grid p-4 space-y-2 font-sans transform bg-white border-t-4 border-blue-500  shadow lg:translate-x-36 sm:-translate-x-3 lg:translate-y-2.5 rounded-b xl:ml-5">
+                                        <div class="grid-cols-1">
+                                            <ul class="space-y-2 text-[15px]">
+                                                
+                                                <li>
+                                                    <a href="./fullstack-java.html"
+                                                        class="block py-1 text-gray-500 lg:hover:text-blue-600">
+                                                        FullstackJava with placement
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./curriculum.html"
+                                                        class="block py-1 text-gray-500 hover:text-blue-600">
+                                                        Curriculum
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="./fees.html"
+                                                        class="block py-1 text-gray-500 hover:text-blue-600">
+                                                        Fee Structure
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="relative">
+                                <button href="#"
+                                    class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none lg:text-gray-300 focus:outline-none lg:hover:text-white hover:text-blue-500"
+                                    id="dropdownToggle">
+                                    Resources<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <div class="right-0 hidden p-2 px-5 lg:absolute dropdown-menu lg:px-0" id="dropdownMenu">
+                                    <div
+                                        class="p-4 space-y-2 font-sans transform bg-white rounded-b border-t-4 border-blue-500  shadow lg:translate-x-28 sm:-translate-x-3 lg:translate-y-2.5">
+                                        <ul class=" text-[15px] lg:w-48">
+                                        <ul class="space-y-2 text-[15px] lg:w-48">
+                                            <li>
+                                                <a href="./telegram.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Telegram Channel
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Learning Portal
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./free-practice-tests.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Free Practice Tests
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="firstacademy.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Free IELTS & GRE Tests
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>                            
+                            <li class="">
+                                <a href="./hire-from-us.html"
+                                    class="flex px-4 py-2 text-gray-500 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                    Hire from us!
+                                </a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Learning Portal</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-600 dark:hover:text-white">Free Practice Tests</a>
-                            </li>
-                            </ul>
-                            <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Free IELTS & GRE Test</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="hover:bg-blue-500 px-4 py-2 rounded">
-                    <a href="#" class="block py-2 pl-3 pr-4 text-white rounded md:p-0  transition duration-200 ease-in">Hire from us!</a>
-                    </li>
-                </ul>
+                                <a href="./contactus.html" class="button bg-[#ED4C78] px-5 py-2.5 rounded hover:translate-y-[-4px] duration-500  text-sm font-semibold mx-3 lg:mx-0 lg:my-auto mb-2 lg:mb-0 block my-8">Talk to us</a>
+
+                            </li>   
+                        </ul>
+                    </div>
+                </div>    
             </div>
-            </div>
-        </nav> 
+        </nav>
     </header>
     
     <!--Interview Skills-->
-    <section class="  bg-slate-100 py-10">
-        <div class="  bg-white md:mx-48 mt-24 rounded">
-            <h1 class="text-4xl font-semibold pt-5 p-3 pl-5">Privacy Policy</h1>
-            <p class="py-4 px-6 tracking-wide">The terms "We" / "Us" / "Our"/"Company" individually and collectively refer to Quedb Edtech and the terms "You" /"Your" / "Yourself" refer to the users.</p>
-            <p class="py-4 px-6 tracking-wide">This Privacy Policy is an electronic record in the form of an electronic contract formed under the information Technology Act, 2000 and the rules made thereunder and the amended provisions pertaining to electronic documents / records in various statutes as amended by the information Technology Act, 2000. This Privacy Policy does not require any physical, electronic or digital signature.</p>
-            <p class="py-4 px-6 tracking-wide">This Privacy Policy is a legally binding document between you and Quedb Edtech (both terms defined below). The terms of this Privacy Policy will be effective upon your acceptance of the same (directly or indirectly in electronic form, by clicking on the I accept tab or by use of the website or by other means) and will govern the relationship between you and Quedb Edtech for your use of the website "Website" (defined below).</p>
-            <p class="py-4 px-6 tracking-wide">This document is published and shall be construed in accordance with the provisions of the Information Technology (reasonable security practices and procedures and sensitive personal data of information) rules, 2011 under Information Technology Act, 2000; that require publishing of the Privacy Policy for collection, use, storage and transfer of sensitive personal data or information.</p>
-            <p class="py-4 px-6 tracking-wide">Please read this Privacy Policy carefully by using the Website, you indicate that you understand, agree and consent to this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not use this Website.</p>
-            <p class="py-4 px-6 tracking-wide">By providing us your Information or by making use of the facilities provided by the Website, You hereby consent to the collection, storage, processing and transfer of any or all of Your Personal Information and Non-Personal Information by us as specified under this Privacy Policy. You further agree that such collection, use, storage and transfer of Your Information shall not cause any loss or wrongful gain to you or any other person.</p>
-            <h1 class="text-3xl font-semibold pt-5 p-3 pl-5">USER INFORMATION</h1>
-            <p class="py-4 px-6 tracking-wide">To avail certain services on our Websites, users are required to provide certain information for the registration process namely: - a) your name, b) email address, c) sex, d) age, e) PIN code, f) credit card or debit card details g) medical records and history h) sexual orientation, i) biometric information, j) password etc., and / or your occupation, interests, and the like. The Information as supplied by the users enables us to improve our sites and provide you the most user-friendly experience.</p>
-            <p class="py-4 px-6 tracking-wide">All required information is service dependent and we may use the above said user information to, maintain, protect, and improve its services (including advertising services) and for developing new services</p>
-            <p class="py-4 px-6 tracking-wide">Such information will not be considered as sensitive if it is freely available and accessible in the public domain or is furnished under the Right to Information Act, 2005 or any other law for the time being in force.</p>
-            <p class="py-4 px-6 tracking-wide">We periodically send promotional emails and sms about our company new products and services, and our partnered companies promotions, which we think you may find interesting using the email and phone number you have provided.</p>
-            <p class="py-4 px-6 tracking-wide">From time to time, we may also use your information to contact you for market research purposes. we may contact you by email, phone, sms or mail. we may use this information to customize the website according to your needs.</p>
-            <p class="py-4 px-6 tracking-wide">To Contact you via email, phone or text message, to deliver certain services and information you have requested.</p>
-            <h1 class="text-3xl font-semibold pt-5 p-3 pl-5">COOKIES</h1>
-            <p class="py-4 px-6 tracking-wide">To improve the responsiveness of the sites for our users, we may use "cookies", or similar electronic tools to collect information to assign each visitor a unique, random number as a User Identification (User ID) to understand the user's individual interests using the Identified Computer. Unless you voluntarily identify yourself (through registration, for example), we will have no way of knowing who you are, even if we assign a cookie to your computer. The only personal information a cookie can contain is information you supply (an example of this is when you ask for our Personalised Horoscope). A cookie cannot read data off your hard drive. Our advertisers may also assign their own cookies to your browser (if you click on their ads), a process that we do not control.</p>
-            <p class="py-4 px-6 tracking-wide">Our web servers automatically collect limited information about your computer's connection to the Internet, including your IP address, when you visit our site. (Your IP address is a number that lets computers attached to the Internet know where to send you data -- such as the web pages you view.) Your IP address does not identify you personally. We use this information to deliver our web pages to you upon request, to tailor our site to the interests of our users, to measure traffic within our site and let advertisers know the geographic locations from where our visitors come.</p>
-            <h1 class="text-3xl font-semibold pt-5 p-3 pl-5">LINKS TO THE OTHER SITES</h1>
-            <p class="py-4 px-6 tracking-wide">Our policy discloses the privacy practices for our own web site only. Our site provides links to other websites also that are beyond our control. We shall in no way be responsible in way for your use of such sites.</p>
-            <h1 class="text-3xl font-semibold pt-5 p-3 pl-5">INFORMATION SHARING</h1>
-            <p class="py-4 px-6 tracking-wide">We shares the sensitive personal information to any third party without obtaining the prior consent of the user in the following limited circumstances:</p>
-            <p class="py-4 px-6 tracking-wide">(a) When it is requested or required by law or by any court or governmental agency or authority to disclose, for the purpose of verification of identity, or for the prevention, detection, investigation including cyber incidents, or for prosecution and punishment of offences. These disclosures are made in good faith and belief that such disclosure is reasonably necessary for enforcing these Terms; for complying with the applicable laws and regulations.</p>
-            <p class="py-4 px-6 tracking-wide">(b) We proposes to share such information within its group companies and officers and employees of such group companies for the purpose of processing personal information on its behalf. We also ensure that these recipients of such information agree to process such information based on our instructions and in compliance with this Privacy Policy and any other appropriate confidentiality and security measures.</p>
-            <h1 class="text-3xl font-semibold pt-5 p-3 pl-5">INFORMATION SECURITY</h1>
-            <p class="py-4 px-6 tracking-wide">We take appropriate security measures to protect against unauthorized access to or unauthorized alteration, disclosure or destruction of data. These include internal reviews of our data collection, storage and processing practices and security measures, including appropriate encryption and physical security measures to guard against unauthorized access to systems where we store personal data.</p>
-            <p class="py-4 px-6 tracking-wide">All information gathered on our Website is securely stored within our controlled database. The database is stored on servers secured behind a firewall; access to the servers is password-protected and is strictly limited. However, as effective as our security measures are, no security system is impenetrable. We cannot guarantee the security of our database, nor can we guarantee that information you supply will not be intercepted while being transmitted to us over the Internet. And, of course, any information you include in a posting to the discussion areas is available to anyone with Internet access.</p>
-            <p class="py-4 px-6 tracking-wide">However the internet is an ever evolving medium. We may change our Privacy Policy from time to time to incorporate necessary future changes. Of course, our use of any information we gather will always be consistent with the policy under which the information was collected, regardless of what the new policy may be.</p>
-            <h1 class="text-2xl font-semibold ml-6  pl-5  border-l-4 border-blue-500 text-blue-500">Grievance Redressal</h1>
-            <p class="py-4 px-6 tracking-wide">Redressal Mechanism: Any complaints, abuse or concerns with regards to content and or comment or breach of these terms shall be immediately informed to the designated Grievance Officer as mentioned below via in writing or through email signed with the electronic signature to Quedb Edtech ("Grievance Officer").</p>
+    <section class="py-10  bg-slate-100">
+        <div class="mt-24 bg-white rounded  md:mx-48">
+            <h1 class="p-3 pt-5 pl-5 text-4xl font-semibold">Privacy Policy</h1>
+            <p class="px-6 py-4 tracking-wide">The terms "We" / "Us" / "Our"/"Company" individually and collectively refer to Quedb Edtech and the terms "You" /"Your" / "Yourself" refer to the users.</p>
+            <p class="px-6 py-4 tracking-wide">This Privacy Policy is an electronic record in the form of an electronic contract formed under the information Technology Act, 2000 and the rules made thereunder and the amended provisions pertaining to electronic documents / records in various statutes as amended by the information Technology Act, 2000. This Privacy Policy does not require any physical, electronic or digital signature.</p>
+            <p class="px-6 py-4 tracking-wide">This Privacy Policy is a legally binding document between you and Quedb Edtech (both terms defined below). The terms of this Privacy Policy will be effective upon your acceptance of the same (directly or indirectly in electronic form, by clicking on the I accept tab or by use of the website or by other means) and will govern the relationship between you and Quedb Edtech for your use of the website "Website" (defined below).</p>
+            <p class="px-6 py-4 tracking-wide">This document is published and shall be construed in accordance with the provisions of the Information Technology (reasonable security practices and procedures and sensitive personal data of information) rules, 2011 under Information Technology Act, 2000; that require publishing of the Privacy Policy for collection, use, storage and transfer of sensitive personal data or information.</p>
+            <p class="px-6 py-4 tracking-wide">Please read this Privacy Policy carefully by using the Website, you indicate that you understand, agree and consent to this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not use this Website.</p>
+            <p class="px-6 py-4 tracking-wide">By providing us your Information or by making use of the facilities provided by the Website, You hereby consent to the collection, storage, processing and transfer of any or all of Your Personal Information and Non-Personal Information by us as specified under this Privacy Policy. You further agree that such collection, use, storage and transfer of Your Information shall not cause any loss or wrongful gain to you or any other person.</p>
+            <h1 class="p-3 pt-5 pl-5 text-3xl font-semibold">USER INFORMATION</h1>
+            <p class="px-6 py-4 tracking-wide">To avail certain services on our Websites, users are required to provide certain information for the registration process namely: - a) your name, b) email address, c) sex, d) age, e) PIN code, f) credit card or debit card details g) medical records and history h) sexual orientation, i) biometric information, j) password etc., and / or your occupation, interests, and the like. The Information as supplied by the users enables us to improve our sites and provide you the most user-friendly experience.</p>
+            <p class="px-6 py-4 tracking-wide">All required information is service dependent and we may use the above said user information to, maintain, protect, and improve its services (including advertising services) and for developing new services</p>
+            <p class="px-6 py-4 tracking-wide">Such information will not be considered as sensitive if it is freely available and accessible in the public domain or is furnished under the Right to Information Act, 2005 or any other law for the time being in force.</p>
+            <p class="px-6 py-4 tracking-wide">We periodically send promotional emails and sms about our company new products and services, and our partnered companies promotions, which we think you may find interesting using the email and phone number you have provided.</p>
+            <p class="px-6 py-4 tracking-wide">From time to time, we may also use your information to contact you for market research purposes. we may contact you by email, phone, sms or mail. we may use this information to customize the website according to your needs.</p>
+            <p class="px-6 py-4 tracking-wide">To Contact you via email, phone or text message, to deliver certain services and information you have requested.</p>
+            <h1 class="p-3 pt-5 pl-5 text-3xl font-semibold">COOKIES</h1>
+            <p class="px-6 py-4 tracking-wide">To improve the responsiveness of the sites for our users, we may use "cookies", or similar electronic tools to collect information to assign each visitor a unique, random number as a User Identification (User ID) to understand the user's individual interests using the Identified Computer. Unless you voluntarily identify yourself (through registration, for example), we will have no way of knowing who you are, even if we assign a cookie to your computer. The only personal information a cookie can contain is information you supply (an example of this is when you ask for our Personalised Horoscope). A cookie cannot read data off your hard drive. Our advertisers may also assign their own cookies to your browser (if you click on their ads), a process that we do not control.</p>
+            <p class="px-6 py-4 tracking-wide">Our web servers automatically collect limited information about your computer's connection to the Internet, including your IP address, when you visit our site. (Your IP address is a number that lets computers attached to the Internet know where to send you data -- such as the web pages you view.) Your IP address does not identify you personally. We use this information to deliver our web pages to you upon request, to tailor our site to the interests of our users, to measure traffic within our site and let advertisers know the geographic locations from where our visitors come.</p>
+            <h1 class="p-3 pt-5 pl-5 text-3xl font-semibold">LINKS TO THE OTHER SITES</h1>
+            <p class="px-6 py-4 tracking-wide">Our policy discloses the privacy practices for our own web site only. Our site provides links to other websites also that are beyond our control. We shall in no way be responsible in way for your use of such sites.</p>
+            <h1 class="p-3 pt-5 pl-5 text-3xl font-semibold">INFORMATION SHARING</h1>
+            <p class="px-6 py-4 tracking-wide">We shares the sensitive personal information to any third party without obtaining the prior consent of the user in the following limited circumstances:</p>
+            <p class="px-6 py-4 tracking-wide">(a) When it is requested or required by law or by any court or governmental agency or authority to disclose, for the purpose of verification of identity, or for the prevention, detection, investigation including cyber incidents, or for prosecution and punishment of offences. These disclosures are made in good faith and belief that such disclosure is reasonably necessary for enforcing these Terms; for complying with the applicable laws and regulations.</p>
+            <p class="px-6 py-4 tracking-wide">(b) We proposes to share such information within its group companies and officers and employees of such group companies for the purpose of processing personal information on its behalf. We also ensure that these recipients of such information agree to process such information based on our instructions and in compliance with this Privacy Policy and any other appropriate confidentiality and security measures.</p>
+            <h1 class="p-3 pt-5 pl-5 text-3xl font-semibold">INFORMATION SECURITY</h1>
+            <p class="px-6 py-4 tracking-wide">We take appropriate security measures to protect against unauthorized access to or unauthorized alteration, disclosure or destruction of data. These include internal reviews of our data collection, storage and processing practices and security measures, including appropriate encryption and physical security measures to guard against unauthorized access to systems where we store personal data.</p>
+            <p class="px-6 py-4 tracking-wide">All information gathered on our Website is securely stored within our controlled database. The database is stored on servers secured behind a firewall; access to the servers is password-protected and is strictly limited. However, as effective as our security measures are, no security system is impenetrable. We cannot guarantee the security of our database, nor can we guarantee that information you supply will not be intercepted while being transmitted to us over the Internet. And, of course, any information you include in a posting to the discussion areas is available to anyone with Internet access.</p>
+            <p class="px-6 py-4 tracking-wide">However the internet is an ever evolving medium. We may change our Privacy Policy from time to time to incorporate necessary future changes. Of course, our use of any information we gather will always be consistent with the policy under which the information was collected, regardless of what the new policy may be.</p>
+            <h1 class="pl-5 ml-6 text-2xl font-semibold text-blue-500 border-l-4 border-blue-500">Grievance Redressal</h1>
+            <p class="px-6 py-4 tracking-wide">Redressal Mechanism: Any complaints, abuse or concerns with regards to content and or comment or breach of these terms shall be immediately informed to the designated Grievance Officer as mentioned below via in writing or through email signed with the electronic signature to Quedb Edtech ("Grievance Officer").</p>
             <p class="px-6 tracking-wide">Grievance Officer</p>
-            <p class=" px-6 tracking-wide">www.packetprep.com</p>
-            <p class="py-2 ml-5 my-4 px-6 tracking-wide bg-gradient-to-r from-yellow-400 via-transparent to-transparent">Company Name & Address</p>
+            <p class="px-6 tracking-wide ">www.packetprep.com</p>
+            <p class="px-6 py-2 my-4 ml-5 tracking-wide bg-gradient-to-r from-yellow-400 via-transparent to-transparent">Company Name & Address</p>
             <p class="px-6 tracking-wide">Quedb Edtech Private Limited</p>
             <p class="px-6 tracking-wide">2nd Floor, Oyester Uptown,</p>
               <p class="px-6 tracking-wide"> Beside Durgam Cheruvu Metro Station,</p> 
                <p class="px-6 tracking-wide"> Madhapur, Hyderabad,</p>
                 <p class="px-6 tracking-wide">Telengana, 500081</p>
                <p class="px-6 tracking-wide">Phone: +91 90000 45750</p> 
-                <p class="px-6 tracking-wide pb-5">Email: info@packetprep.com</p>
+                <p class="px-6 pb-5 tracking-wide">Email: info@packetprep.com</p>
             </div>
         </section>
 

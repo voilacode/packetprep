@@ -7,46 +7,150 @@
     <link href="../dist/output.css" rel="stylesheet">
     <title>FresherBot</title>
 </head>
-<body>
-    <header class="container-fluid bg-sky-600 lg:px-20 md:px-5 px-2">
-        <nav class="bg-sky-600 border-gray-200">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-              <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="../assets/file_fresherbotlogo (1).jpg" class="lg:h-12 md:h-7 h-6" alt="Flowbite Logo" />
-                 
-              </a>
-              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                  </svg>
-              </button>
-              <div class="hidden w-full  lg:flex md:flex  md:gap-4 j md:w-auto" id="navbar-default">
-               
-                <ul class="font-medium flex flex-col  p-4 md:py-2 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
-                  <li>
-                    <a href="#" class="block text-lg font-sans hover:text-blue-500  text-white py-2 pl-3 pr-4 rounded md:bg-transparent  md:p-0" aria-current="page">For Candidate</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block text-lg font-sans hover:text-blue-500  text-white py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0">For Employee</a>
-                  </li>
-                 
-                </ul>
-                <div class="mt-2">
-                    <button type="button" class="text-white bg-gradient-to-r  from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Login</button>
-                    <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Register</button></div>
-                
+<body class="bg-white">
+  
+  <header class="fixed z-10 w-screen">
+    <nav class="text-white transition-all duration-500 ease-in-out bg-no-repeat " style="background-color:#135ca1;">
+        <div class="items-center lg:justify-between justify-around max-w-screen-xl px-2 py-2 mx-auto lg:flex sm:px-[52px] w-auto">
+            <div class="flex justify-between px-1">
+                <div>
+                    <a href="./index.html" class="inline-flex w-48 py-2 mx-auto text-xl font-bold tracking-wider text-white uppercase sm:px-0 sm:w-60">
+                        <img src="../assets/pp_logo.webp" alt="logo" height="auto">
+                    </a>
+                </div>
+
+                <div class="items-center my-auto lg:hidden ">
+                    <nav>
+                        <ul>
+                            <li class="flex items-center gap-2 px-1 py-1 bg-white rounded-full">
+                                <!--menu bar-->
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="gray" class="w-6 h-6" id="menuIcon"
+                                    onclick="toggleMobileMenu()">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                                </svg>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            </div>
-          </nav> </header>
-          <section class="lg:py-10 lg:px-20 md:py-10 px-2 py-5">
-            <div class="flex justify-center mx-auto max-w-screen-xl">
-            <div class="grid lg:grid-cols-5 md:grid-cols-3  grid-cols-1 lg:px-5 px-5">
-                <div class="lg:col-span-3 flex flex-col justify-center  md:col-span-2">
-                 <h1 class="lg:text-5xl text-2xl md:text-4xl font-serif font-semibold  text-blue-900 ">Know Your Candidates </h1>
-                 <h1 class="lg:text-5xl text-2xl md:text-4xl font-serif font-semibold mt-1 text-blue-900"> Better!</h1>  
-                 <p class="lg:text-2xl md:text-lg  text-lg font-serif  text-slate-600 lg:mt-5  mt-3">AI hiring tool with deep highlights</p> 
-                <div class="flex lg:flex-nowrap md:flex-nowrap flex-wrap lg:gap-5 gap-3 py-10">
+
+            <div class="items-center hidden w-full py-2 my-auto nav-links lg:inline-flex lg:w-auto lg:mt-0 lg:py-0 sm:px-4 "
+                id="mainMenu">
+                <div class="py-2 mx-auto my-auto bg-white rounded lg:inline-flex lg:w-auto lg:mt-0 lg:bg-inherit sm:px-0 ms-2 sm:ms-0 me-2 sm:me-0" id="mainMenu">
+                    <ul class="flex flex-col w-full space-y-0.5 lg:w-auto lg:flex-row lg:space-y-0  lg:space-x-1 transition-all duration-300 ease-in-out font-afacad text-lg[px] ls-2 my-auto mx-auto sm:ms-3 lg:ms-0">
+                        <li class="">
+                            <a href="./index.html"
+                                class="flex px-4 py-2 text-gray-500 duration-300 ease-in-out rounded-md lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                Home
+                            </a>
+                        </li>
+                        <li class="relative">
+                            <button
+                                class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none focus:outline-none lg:hover:text-white lg:text-gray-300 hover:text-blue-500"
+                                id="dropdownToggle1">
+                                Job Training<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <div class="right-0 hidden w-full p-2 px-5 rounded-md lg:absolute dropdown-menu lg:w-72 lg:px-0 "
+                                id="dropdownMenu1">
+                                <div
+                                    class="grid p-4 space-y-2 font-sans transform bg-white border-t-4 border-blue-500  shadow lg:translate-x-36 sm:-translate-x-3 lg:translate-y-2.5 rounded-b xl:ml-5">
+                                    <div class="grid-cols-1">
+                                        <ul class="space-y-2 text-[15px]">
+                                            
+                                            <li>
+                                                <a href="./fullstack-java.html"
+                                                    class="block py-1 text-gray-500 lg:hover:text-blue-600">
+                                                    FullstackJava with placement
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./curriculum.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Curriculum
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./fees.html"
+                                                    class="block py-1 text-gray-500 hover:text-blue-600">
+                                                    Fee Structure
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <button href="#"
+                                class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none lg:text-gray-300 focus:outline-none lg:hover:text-white hover:text-blue-500"
+                                id="dropdownToggle">
+                                Resources<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <div class="right-0 hidden p-2 px-5 lg:absolute dropdown-menu lg:px-0" id="dropdownMenu">
+                                <div
+                                    class="p-4 space-y-2 font-sans transform bg-white rounded-b border-t-4 border-blue-500  shadow lg:translate-x-28 sm:-translate-x-3 lg:translate-y-2.5">
+                                    <ul class=" text-[15px] lg:w-48">
+                                    <ul class="space-y-2 text-[15px] lg:w-48">
+                                        <li>
+                                            <a href="./telegram.html"
+                                                class="block py-1 text-gray-500 hover:text-blue-600">
+                                                Telegram Channel
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block py-1 text-gray-500 hover:text-blue-600">
+                                                Learning Portal
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="./free-practice-tests.html"
+                                                class="block py-1 text-gray-500 hover:text-blue-600">
+                                                Free Practice Tests
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="firstacademy.html"
+                                                class="block py-1 text-gray-500 hover:text-blue-600">
+                                                Free IELTS & GRE Tests
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>                            
+                        <li class="">
+                            <a href="./hire-from-us.html"
+                                class="flex px-4 py-2 text-gray-500 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                Hire from us!
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./contactus.html" class="button bg-[#ED4C78] px-5 py-2.5 rounded hover:translate-y-[-4px] duration-500  text-sm font-semibold mx-3 lg:mx-0 lg:my-auto mb-2 lg:mb-0 block my-8">Talk to us</a>
+
+                        </li>   
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </nav>
+</header>
+  
+          <section class="px-2 py-5 lg:py-10 lg:px-20 md:py-10">
+            <div class="flex justify-center max-w-screen-xl mx-auto">
+            <div class="grid grid-cols-1 px-5 lg:grid-cols-5 md:grid-cols-3 lg:px-5">
+                <div class="flex flex-col justify-center lg:col-span-3 md:col-span-2">
+                 <h1 class="font-serif text-2xl font-semibold text-blue-900 lg:text-5xl md:text-4xl ">Know Your Candidates </h1>
+                 <h1 class="mt-1 font-serif text-2xl font-semibold text-blue-900 lg:text-5xl md:text-4xl"> Better!</h1>  
+                 <p class="mt-3 font-serif text-lg lg:text-2xl md:text-lg text-slate-600 lg:mt-5">AI hiring tool with deep highlights</p> 
+                <div class="flex flex-wrap gap-3 py-10 lg:flex-nowrap md:flex-nowrap lg:gap-5">
                     <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden lg:text-lg text-sm font-medium text-gray-600 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
                         <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-opacity-0">
                           Job Posting
@@ -72,7 +176,7 @@
               
                <!---di1-->
                 <div class="lg:col-span-2">
-                    <img src="https://th.bing.com/th/id/R.96aa38f12ecd25c47afe387d2b2f36dd?rik=OtZjiRGxjfqt4Q&riu=http%3a%2f%2fpinpointhr.com%2fwp-content%2fuploads%2f2015%2f12%2fcandidate.png&ehk=9Uu3nmu%2b3%2fZlkFg8rgXjylOyiQcV6Vn7a8XcBKaPAZg%3d&risl=&pid=ImgRaw&r=0" class="  mr-3" alt="Flowbite Logo" />
+                    <img src="https://th.bing.com/th/id/R.96aa38f12ecd25c47afe387d2b2f36dd?rik=OtZjiRGxjfqt4Q&riu=http%3a%2f%2fpinpointhr.com%2fwp-content%2fuploads%2f2015%2f12%2fcandidate.png&ehk=9Uu3nmu%2b3%2fZlkFg8rgXjylOyiQcV6Vn7a8XcBKaPAZg%3d&risl=&pid=ImgRaw&r=0" class="mr-3 " alt="Flowbite Logo" />
                 </div>
                 
               </div>
@@ -81,190 +185,190 @@
             
           </section>
           
-          <section class="bg-sky-50 lg:py-10 lg:px-20  p-5">
-            <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold font-serif text-center">About Job Posting</h1>
-         <div class="flex justify-center mx-auto max-w-screen-xl">
-<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:py-10 lg:px-5 md:py-8 py-5 lg:gap-10 md:gap-6 gap-5">
+          <section class="p-5 bg-sky-50 lg:py-10 lg:px-20">
+            <h1 class="font-serif text-2xl font-semibold text-center lg:text-4xl md:text-3xl">About Job Posting</h1>
+         <div class="flex justify-center max-w-screen-xl mx-auto">
+<div class="grid grid-cols-1 gap-5 py-5 lg:grid-cols-3 md:grid-cols-2 lg:py-10 lg:px-5 md:py-8 lg:gap-10 md:gap-6">
 <!--d1-->
-  <div class="bg-white p-5 rounded-2xl border-2 border-blue-500 shadow-slate-200 shadow-md">
+  <div class="p-5 bg-white border-2 border-blue-500 shadow-md rounded-2xl shadow-slate-200">
     
-      <div class="flex gap-2 justify-center">
-        <img src="../assets/account-information-icon-14.jpg" alt="accountinfo img" class="h-10 w-10">
+      <div class="flex justify-center gap-2">
+        <img src="../assets/account-information-icon-14.jpg" alt="accountinfo img" class="w-10 h-10">
 
-        <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Access a million profiles</h4>
+        <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Access a million profiles</h4>
       </div>
-    <p class=" text-slate-500 tracking-wider  lg:text-base text-sm font-sans text-center py-1">Tap into our vast candidate database of a million profiles. Streamline hiring by accessing diverse talent quickly, saving you time and resources.</p>
+    <p class="py-1 font-sans text-sm tracking-wider text-center text-slate-500 lg:text-base">Tap into our vast candidate database of a million profiles. Streamline hiring by accessing diverse talent quickly, saving you time and resources.</p>
   </div>
 <!---d2-->
 
-<div class="bg-white p-5 rounded-2xl border-2 border-blue-500 shadow-slate-200 shadow-md">
+<div class="p-5 bg-white border-2 border-blue-500 shadow-md rounded-2xl shadow-slate-200">
     
   <div class="flex justify-center gap-1">
-    <img src="../assets/questionnaire icon.webp" alt="questionnaire img" class="h-10 w-10">
+    <img src="../assets/questionnaire icon.webp" alt="questionnaire img" class="w-10 h-10">
 
-    <h4 class="text-lg font-sans font-medium self-center">Pre-Qualification Questionnaire</h4>
+    <h4 class="self-center font-sans text-lg font-medium">Pre-Qualification Questionnaire</h4>
   </div>
-<p class=" text-slate-500 tracking-wider lg:text-base text-sm font-sans text-center py-1">Before applying, complete this quick questionnaire to assess your eligibility for the entry-level position. Your responses aid us in evaluating your qualifications.</p>
+<p class="py-1 font-sans text-sm tracking-wider text-center text-slate-500 lg:text-base">Before applying, complete this quick questionnaire to assess your eligibility for the entry-level position. Your responses aid us in evaluating your qualifications.</p>
 </div> 
 
     <!--d3-->
-<div class="bg-white p-5  rounded-2xl border-2 border-blue-500 shadow-slate-200 shadow-md">
+<div class="p-5 bg-white border-2 border-blue-500 shadow-md rounded-2xl shadow-slate-200">
 
-  <div class="flex gap-2 justify-center">
-    <img src="../assets/Candidate.png" alt="candidate img" class="h-10 w-10">
+  <div class="flex justify-center gap-2">
+    <img src="../assets/Candidate.png" alt="candidate img" class="w-10 h-10">
 
-    <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Validated Candidate Profile</h4>
+    <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Validated Candidate Profile</h4>
   </div>
-<p class=" text-slate-500 tracking-wider lg:text-base text-sm font-sans text-center py-1 ">Discover confidence in our verified candidate profiles. Our rigorous process confirms qualifications, reducing hiring risks."</p>
+<p class="py-1 font-sans text-sm tracking-wider text-center text-slate-500 lg:text-base">Discover confidence in our verified candidate profiles. Our rigorous process confirms qualifications, reducing hiring risks."</p>
 </div>
 <!---d4-->
     
-    <div class="bg-white p-5 rounded-2xl border-2 border-blue-500 shadow-slate-200 shadow-md">
+    <div class="p-5 bg-white border-2 border-blue-500 shadow-md rounded-2xl shadow-slate-200">
 
-      <div class="flex gap-2 justify-center">
-        <img src="../assets/System.png" alt="system img" class="h-10 w-10">
+      <div class="flex justify-center gap-2">
+        <img src="../assets/System.png" alt="system img" class="w-10 h-10">
     
-        <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Screening Test</h4>
+        <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Screening Test</h4>
       </div>
-    <p class=" text-slate-500 tracking-wider lg:text-base text-sm font-sans text-center py-1 ">Optimize screening with our customizable tool for quick candidate selection.
+    <p class="py-1 font-sans text-sm tracking-wider text-center text-slate-500 lg:text-base">Optimize screening with our customizable tool for quick candidate selection.
       Simplify candidate evaluation for the perfect fit with our screening tool
 </div>
 <!--d5-->
-<div class="bg-white p-5 rounded-2xl border-2 border-blue-500 shadow-slate-200 shadow-md">
+<div class="p-5 bg-white border-2 border-blue-500 shadow-md rounded-2xl shadow-slate-200">
 
-  <div class="flex gap-2 justify-center">
-    <img src="../assets/Mailer.png" alt="mailer img" class="h-12 w-12">
+  <div class="flex justify-center gap-2">
+    <img src="../assets/Mailer.png" alt="mailer img" class="w-12 h-12">
 
-    <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Bulk Mailer</h4>
+    <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Bulk Mailer</h4>
   </div>
-<p class=" text-slate-500 tracking-wider lg:text-base text-sm font-sans text-center py-1 ">Effortless outreach with our Bulk Mailer. Send messages in a snap
+<p class="py-1 font-sans text-sm tracking-wider text-center text-slate-500 lg:text-base">Effortless outreach with our Bulk Mailer. Send messages in a snap
   Streamline messaging to your contacts with our Bulk Mailer</p>
  
 </div>
 <!--d6-->
-<div class="bg-white p-5 rounded-2xl border-2 border-blue-500 shadow-slate-200 shadow-md">
+<div class="p-5 bg-white border-2 border-blue-500 shadow-md rounded-2xl shadow-slate-200">
 
-  <div class="flex gap-2 justify-center">
+  <div class="flex justify-center gap-2">
    
 
-    <h4 class="lg:text-xl text-lg font-sans font-medium self-center py-2">✅❌Shortlist/Reject Updates</h4>
+    <h4 class="self-center py-2 font-sans text-lg font-medium lg:text-xl">✅❌Shortlist/Reject Updates</h4>
   </div>
-<p class=" text-slate-500 tracking-wider lg:text-base text-sm font-sans text-center py-1 ">Efficiently manage candidates with our Shortlist/Reject Updates feature. Make quick decisions and keep applicants informed, streamlining your hiring process.</p>
+<p class="py-1 font-sans text-sm tracking-wider text-center text-slate-500 lg:text-base">Efficiently manage candidates with our Shortlist/Reject Updates feature. Make quick decisions and keep applicants informed, streamlining your hiring process.</p>
  
 </div>
 </div>
 </section>
               
  
-<section class=" lg:py-10 lg:px-20  p-5">
-  <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold font-serif text-center">Assessment</h1>
+<section class="p-5 lg:py-10 lg:px-20">
+  <h1 class="font-serif text-2xl font-semibold text-center lg:text-4xl md:text-3xl">Assessment</h1>
 
-<div class="flex justify-center mx-auto max-w-screen-xl">
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:py-10 lg:px-5 md:py-8 py-5 lg:gap-10 md:gap-6 gap-5">
+<div class="flex justify-center max-w-screen-xl mx-auto">
+  <div class="grid grid-cols-1 gap-5 py-5 lg:grid-cols-3 md:grid-cols-2 lg:py-10 lg:px-5 md:py-8 lg:gap-10 md:gap-6">
   <!--d1-->
-    <div class="bg-white p-5 rounded-2xl border-2 hover:bg-blue-50 border-blue-200 shadow-slate-200 shadow-md">
+    <div class="p-5 bg-white border-2 border-blue-200 shadow-md rounded-2xl hover:bg-blue-50 shadow-slate-200">
       
-        <div class="flex gap-2 justify-center">
-          <img src="../assets/assessment.png" alt="accountinfo img" class="h-10 w-10">
+        <div class="flex justify-center gap-2">
+          <img src="../assets/assessment.png" alt="accountinfo img" class="w-10 h-10">
   
-          <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Proctored assesment</h4>
+          <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Proctored assesment</h4>
         </div>
-      <p class=" text-slate-500 lg:text-base text-sm font-sans text-center py-1">Ensure exam integrity with our Proctored Assessment. Monitor and verify test-taking conditions to maintain the validity of evaluations</p>
+      <p class="py-1 font-sans text-sm text-center text-slate-500 lg:text-base">Ensure exam integrity with our Proctored Assessment. Monitor and verify test-taking conditions to maintain the validity of evaluations</p>
     </div>
   <!---d2-->
   
-  <div class="bg-white p-5 rounded-2xl border-2 hover:bg-blue-50 border-blue-200 shadow-slate-200 shadow-md">
+  <div class="p-5 bg-white border-2 border-blue-200 shadow-md rounded-2xl hover:bg-blue-50 shadow-slate-200">
       
     <div class="flex justify-center gap-2">
-      <img src="../assets/coding-icon-15.jpg" alt="system img" class="h-10 w-10">
+      <img src="../assets/coding-icon-15.jpg" alt="system img" class="w-10 h-10">
   
-      <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Coding Tests</h4>
+      <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Coding Tests</h4>
     </div>
-  <p class=" text-slate-500 lg:text-base text-sm font-sans text-center py-1">Simplify your assessment process with Coding Tests. Evaluate candidates' coding skills efficiently to find the right fit for your team.</p>
+  <p class="py-1 font-sans text-sm text-center text-slate-500 lg:text-base">Simplify your assessment process with Coding Tests. Evaluate candidates' coding skills efficiently to find the right fit for your team.</p>
   </div> 
   
       <!--d3-->
-  <div class="bg-white p-5 rounded-2xl border-2 hover:bg-blue-50 border-blue-200 shadow-slate-200 shadow-md">
+  <div class="p-5 bg-white border-2 border-blue-200 shadow-md rounded-2xl hover:bg-blue-50 shadow-slate-200">
   
-    <div class="flex gap-2 justify-center">
-      <img src="../assets/Resume-PNG-Clipart.png" alt="resume img" class="h-10 w-10">
+    <div class="flex justify-center gap-2">
+      <img src="../assets/Resume-PNG-Clipart.png" alt="resume img" class="w-10 h-10">
   
-      <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Ressume Collections</h4>
+      <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Ressume Collections</h4>
     </div>
-  <p class=" text-slate-500 lg:text-base text-sm font-sans text-center py-1 ">Effortlessly gather resumes with our Resume Collections feature. Streamline your recruitment process by easily collecting and organizing applicant CVs.</p>
+  <p class="py-1 font-sans text-sm text-center text-slate-500 lg:text-base">Effortlessly gather resumes with our Resume Collections feature. Streamline your recruitment process by easily collecting and organizing applicant CVs.</p>
   </div>
   <!---d4-->
       
-      <div class="bg-white p-5 rounded-2xl border-2 hover:bg-blue-50 border-blue-200 shadow-slate-200 shadow-md">
+      <div class="p-5 bg-white border-2 border-blue-200 shadow-md rounded-2xl hover:bg-blue-50 shadow-slate-200">
   
-        <div class="flex gap-2 justify-center">
-          <img src="../assets/result analysys.png" alt="result img" class="h-12 w-12">
+        <div class="flex justify-center gap-2">
+          <img src="../assets/result analysys.png" alt="result img" class="w-12 h-12">
       
-          <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Result Analysis</h4>
+          <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Result Analysis</h4>
         </div>
-      <p class=" text-slate-500 lg:text-base text-sm font-sans text-center py-1 ">Gain insights with our Result Analysis tool. Easily assess candidate performance and make data-driven decisions to enhance your hiring process.</p>
+      <p class="py-1 font-sans text-sm text-center text-slate-500 lg:text-base">Gain insights with our Result Analysis tool. Easily assess candidate performance and make data-driven decisions to enhance your hiring process.</p>
   </div>
   <!--d5-->
-  <div class="bg-white p-5 rounded-2xl border-2 hover:bg-blue-50 border-blue-200 shadow-slate-200 shadow-md">
+  <div class="p-5 bg-white border-2 border-blue-200 shadow-md rounded-2xl hover:bg-blue-50 shadow-slate-200">
   
-    <div class="flex gap-2 justify-center">
-      <img src="../assets/profile report.jpeg" alt="result img" class="h-12 w-12">
+    <div class="flex justify-center gap-2">
+      <img src="../assets/profile report.jpeg" alt="result img" class="w-12 h-12">
   
-      <h4 class="lg:text-xl text-lg font-sans font-medium self-center"> profile report </h4>
+      <h4 class="self-center font-sans text-lg font-medium lg:text-xl"> profile report </h4>
     </div>
-  <p class=" text-slate-500 lg:text-base text-sm font-sans text-center py-1 ">Get a comprehensive overview with our Profile Report. Access detailed insights on candidate qualifications and skills to make informed hiring choices</p>
+  <p class="py-1 font-sans text-sm text-center text-slate-500 lg:text-base">Get a comprehensive overview with our Profile Report. Access detailed insights on candidate qualifications and skills to make informed hiring choices</p>
    
   </div>
   <!--d6-->
-  <div class="bg-white p-5 rounded-2xl border-2 hover:bg-blue-50 border-blue-200 shadow-slate-200 shadow-md">
+  <div class="p-5 bg-white border-2 border-blue-200 shadow-md rounded-2xl hover:bg-blue-50 shadow-slate-200">
   
-    <div class="flex gap-2 justify-center">
-      <img src="../assets/excel_document_icon.webp" alt="excel img" class="h-12 w-12">
+    <div class="flex justify-center gap-2">
+      <img src="../assets/excel_document_icon.webp" alt="excel img" class="w-12 h-12">
   
-      <h4 class="lg:text-xl text-lg font-sans font-medium self-center">Excel Report</h4>
+      <h4 class="self-center font-sans text-lg font-medium lg:text-xl">Excel Report</h4>
     </div>
-  <p class=" text-slate-500 lg:text-base text-sm font-sans text-center py-1 ">Effortlessly export data with our Excel Report feature. Retrieve and organize information in Excel format for convenient analysis and record-keeping.</p>
+  <p class="py-1 font-sans text-sm text-center text-slate-500 lg:text-base">Effortlessly export data with our Excel Report feature. Retrieve and organize information in Excel format for convenient analysis and record-keeping.</p>
    
   </div>
   </div>
 </section>   
 
-<section class="bg-sky-500 lg:py-10 lg:px-20  p-5">
-  <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold font-serif text-center text-white">Campus Drives</h1>
+<section class="p-5 bg-sky-500 lg:py-10 lg:px-20">
+  <h1 class="font-serif text-2xl font-semibold text-center text-white lg:text-4xl md:text-3xl">Campus Drives</h1>
 
-<div class="flex justify-center mx-auto max-w-screen-xl">
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:py-10 lg:px-5 md:py-8 py-5 cursor-pointer lg:gap-10 md:gap-6 gap-5">
+<div class="flex justify-center max-w-screen-xl mx-auto">
+  <div class="grid grid-cols-1 gap-5 py-5 cursor-pointer lg:grid-cols-3 md:grid-cols-2 lg:py-10 lg:px-5 md:py-8 lg:gap-10 md:gap-6">
   <!--d1-->
-    <div class="bg-white flex  flex-col items-center p-2 rounded-lg  border-2 border-black  shadow-slate-200 shadow-md">
+    <div class="flex flex-col items-center p-2 bg-white border-2 border-black rounded-lg shadow-md shadow-slate-200">
       
         
           <img src="../assets/support-png-4.png" alt="Support img" class="h-36 w-36">
   
-          <h4 class="lg:text-xl text-lg font-sans font-medium text-red-900 underline">Dedicated Hiring Support</h4>
+          <h4 class="font-sans text-lg font-medium text-red-900 underline lg:text-xl">Dedicated Hiring Support</h4>
         
-      <p class="italic line-clamp-5 text-slate-500 lg:text-base text-sm font-sans text-center py-3">Receive personalized assistance with our Dedicated Hiring Support. Our experts are here to guide you through every step of your recruitment journey</p>
+      <p class="py-3 font-sans text-sm italic text-center line-clamp-5 text-slate-500 lg:text-base">Receive personalized assistance with our Dedicated Hiring Support. Our experts are here to guide you through every step of your recruitment journey</p>
     </div>
   <!---d2-->
   
-  <div class="bg-white p-5  flex flex-col items-center rounded-lg  border-2 border-black  shadow-slate-200 shadow-md">
+  <div class="flex flex-col items-center p-5 bg-white border-2 border-black rounded-lg shadow-md shadow-slate-200">
       
     
-      <img src="../assets/Communities__Networks-512.webp" alt="system img" class="h-32 w-32">
+      <img src="../assets/Communities__Networks-512.webp" alt="system img" class="w-32 h-32">
   
-      <h4 class="lg:text-xl text-lg font-sans font-medium p-1 rounded-l-md text-green-800 underline">College Network</h4>
+      <h4 class="p-1 font-sans text-lg font-medium text-green-800 underline lg:text-xl rounded-l-md">College Network</h4>
   
-  <p class="italic line-clamp-5 text-slate-500 lg:text-base text-sm font-sans text-center  py-2">Connect with talent through our College Network. Access a pool of potential candidates from various educational institutions to meet your hiring needs</p>
+  <p class="py-2 font-sans text-sm italic text-center line-clamp-5 text-slate-500 lg:text-base">Connect with talent through our College Network. Access a pool of potential candidates from various educational institutions to meet your hiring needs</p>
   </div> 
   
       <!--d3-->
-  <div class="bg-white p-5    flex flex-col items-center rounded-lg md:col-span-2 lg:col-span-1  border-2 border-black  shadow-slate-200 shadow-md">
+  <div class="flex flex-col items-center p-5 bg-white border-2 border-black rounded-lg shadow-md md:col-span-2 lg:col-span-1 shadow-slate-200">
   
     
-      <img src="../assets/CandidateV.webp" alt="candidate img" class="h-32 w-32">
+      <img src="../assets/CandidateV.webp" alt="candidate img" class="w-32 h-32">
   
-      <h4 class="lg:text-xl text-lg font-sans font-medium p-1 rounded-l-md underline">Candidate verification</h4>
+      <h4 class="p-1 font-sans text-lg font-medium underline lg:text-xl rounded-l-md">Candidate verification</h4>
     
-  <p class="italic line-clamp-5 text-slate-500 lg:text-base text-sm font-sans text-center   py-2 ">Ensure trust in your hires with Candidate Verification. Our rigorous process confirms qualifications and background information, reducing hiring risks.</p>
+  <p class="py-2 font-sans text-sm italic text-center line-clamp-5 text-slate-500 lg:text-base ">Ensure trust in your hires with Candidate Verification. Our rigorous process confirms qualifications and background information, reducing hiring risks.</p>
   </div>
  
   </div>
