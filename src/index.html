@@ -186,13 +186,13 @@
                         </button>
 
                         <!-- Modal -->
-                        <div id="popup"  action="submit.php" method="POST" class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+                        <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
                             <div class="bg-white rounded-lg w-92 sm:w-3/5">
                                 <div class="flex justify-center mb-0 rounded-t" style="background-color: #2b81cb;">
                                     <img src="../assets/packetprep.png" alt="pp logo" class="block mx-auto" width="200px" height="200px" />
                                 </div>
                     
-                                <form id="contactForm" class="p-2 sm:p-8">
+                                <form id="contactForm" class="p-2 sm:p-8" method="POST" action="send_form_data.php">
                                     <div class="mb-4">
                                         <input type="text" id="name" name="name" class="block w-full p-4 mt-2 form-input border-2 rounded border-gray-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Name" required>
                                         <input type="email" id="email" name="email" class="block w-full p-4 mt-2 form-input border-2 rounded border-gray-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email" required>
@@ -819,7 +819,7 @@
                 <!--first-->
                 <div class="mb-2">
                     <button class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-300 rounded-t outline-none cursor-pointer accordion hover:bg-blue-400 focus:bg-blue-400 focus:text-white hover:text-white hover:border-white focus:border-white ">
-                        <div> Why choose PacketPrep for job guaranteed training?</div>
+                        <div> Why choose PacketPrep for placement guaranteed training?</div>
                         <div class="text-xl font-bold icon">+</div>
                     </button>
                     <div class="hidden p-1 p-5 overflow-hidden text-gray-600 duration-300 ease-in-out border border-gray-200 rounded-b shadow-xl panel transition-height">
@@ -844,7 +844,7 @@
                     </div>
                 </div>
 
-                <!--fourth-->
+                <!--third-->
                 <div class="mb-2">
                     <button class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-300 rounded-t outline-none cursor-pointer accordion hover:bg-blue-400 focus:bg-blue-400 focus:text-white hover:text-white hover:border-white focus:border-white">
                         <div> Does PacketPrep provide classroom & online training?</div>
@@ -856,14 +856,14 @@
                     </div>
                 </div>
 
-                <!--fifth-->
+                <!--fourth-->
                 <div class="mb-2">
                     <button class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-300 rounded-t outline-none cursor-pointer accordion hover:bg-blue-400 focus:bg-blue-400 focus:text-white hover:text-white hover:border-white focus:border-white">
                         <div> How long is the placement support given?</div>
                         <div class="text-xl font-bold icon">+</div>
                     </button>
                     <div class="hidden p-1 p-5 overflow-hidden text-gray-600 duration-300 ease-in-out border border-gray-200 rounded-b shadow-xl panel transition-height">
-                        <p class="mb-2 ">Job placement support is provided to you to assist you in finding suitable position for yourself and to assist you in preparing for interviews. We assist you with interview preparation, job hunting, and other prep as required. With One year support, you'll have the opportunity to attend an interview with 30 to 60 companies.
+                        <p class="mb-2 ">Job placement support is provided to you to assist you in finding suitable position for yourself and to assist you in preparing for interviews. We assist you with interview preparation, job hunting, and other prep as required. With 2 year support, you'll have the opportunity to attend an interview with 30 to 60 companies.
                         </p>
                     </div>
                 </div>
@@ -895,7 +895,7 @@
 
                 <div class="justify-end col-span-2 my-4 text-center ms-auto sm:col-span-1 btn">
                     <button
-                        class="px-16 py-4 mx-2 mb-2 font-semibold text-white duration-200 ease-in transform rounded-full bg-cyan-500 hover:-translate-y-2"  data-popup="popup" aria-label="try">
+                        class="px-12 py-4 mx-2 mb-2 font-semibold text-white duration-200 ease-in transform rounded-full bg-cyan-500 hover:-translate-y-2"  data-popup="popup" aria-label="try">
                         Apply Now
                     </button>
                     <button class="px-12 py-4 mx-2 my-2 font-semibold text-gray-800 duration-200 ease-in transform bg-white rounded-full hover:-translate-y-2" aria-label="view">
