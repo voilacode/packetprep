@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional CSS */
+        .full-screen {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Positioning the cancel buttons */
+        .popup-container {
+            position: relative;
+        }
+
+        .cancel-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200 flex flex-col justify-center items-center h-screen">
+    <h1 class="text-4xl font-semibold text-blue-900 mb-4 ">Welcome To the Quiz App</h1>
+    <button id="start-button"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+        Start Quiz
+    </button>
+
+    <!-- Popup for Questions -->
+    <div id="questions-popup"
+        class="absolute inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden">
+        <div class="bg-white rounded-lg p-8 max-w-2xl overflow-y-auto max-h-screen popup-container">
+            <button id="cancel-questions"
+                class="cancel-button hover:text-red-500  text-gray-500  font-bold py-2 px-4 rounded focus:outline-none">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h2 class="text-xl font-bold mb-4">Questions</h2>
+            <div id="questions-content" class="popup-content font-serif"></div>
+            <button id="submit-quiz"
+                class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                Submit Quiz
+            </button>
+            <div id="score" class="text-lg font-bold mt-4">Score: 0</div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        const questionsUrl = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/co/coctqse029ed/coctqse029ed_questionbank.json';
+
+        let totalScore = 0;
+        let isQuizSubmitted = false;
+
+        const displayPopup = (popupId) => {
+            const popup = document.getElementById(popupId);
+            popup.classList.remove('hidden');
+        };
+
+        const closePopup = (popupId) => {
+            const popup = document.getElementById(popupId);
+            popup.classList.add('hidden');
+        };
+
+        const startButton = document.getElementById('start-button');
+        startButton.addEventListener('click', () => {
+            displayPopup('questions-popup');
+
+            fetch(questionsUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const questionsContent = document.getElementById('questions-content');
+
+                    data.questions.forEach((questionData, index) => {
+                        const questionElement = document.createElement('div');
+                        const qData = JSON.parse(questionData.qdata)[0];
+                        const answer = qData.answer.toLowerCase().trim();
+
+                        let optionsHtml = '';
+
+                        if (qData.type === 'mcq' || qData.type === 'maq') {
+                            const options = ['a', 'b', 'c', 'd'];
+                            optionsHtml += `<ul>`;
+                            options.forEach(option => {
+                                optionsHtml += `<li><input type="${qData.type === 'mcq' ? 'radio' : 'checkbox'}" id="option-${option}-${index}" name="question-${index}" value="${option}">
+                                    <label for="option-${option}-${index}" class="ml-2">${qData[option]}</label></li>`;
+                            });
+                            optionsHtml += `</ul>`;
+                        } else {
+                            optionsHtml += `<input type="text" id="user-answer-${index}" placeholder="Your Answer" class="border border-gray-300 rounded-md p-1 w-full mb-2">`;
+                        }
+
+                        questionElement.innerHTML = `
+                            <p><strong>Question ${index + 1}:</strong> ${qData.question}</p>
+                            ${optionsHtml}
+                            <div id="feedback-${index}" class="text-sm font-bold"></div>
+                            <hr class="my-4">
+                        `;
+                        questionsContent.appendChild(questionElement);
+
+                        const submitButton = document.getElementById('submit-quiz');
+                        submitButton.addEventListener('click', () => {
+                            if (!isQuizSubmitted) {
+                                const feedback = document.getElementById(`feedback-${index}`);
+
+                                if (qData.type === 'mcq' || qData.type === 'maq') {
+                                    const userAnswers = document.querySelectorAll(`input[name="question-${index}"]:checked`);
+
+                                    if (userAnswers.length > 0) {
+                                        const selectedAnswers = Array.from(userAnswers).map(checkbox => checkbox.value);
+                                        const isCorrect = selectedAnswers.sort().toString() === answer.split('|').sort().toString();
+                                        feedback.textContent = isCorrect ? 'Correct' : 'Wrong';
+                                        feedback.classList.add(isCorrect ? 'text-green-500' : 'text-red-500');
+
+                                        if (isCorrect) {
+                                            totalScore++;
+                                            document.getElementById('score').textContent = `Score: ${totalScore}`;
+                                        }
+                                    } else {
+                                        feedback.textContent = 'Please select an answer.';
+                                        feedback.classList.add('text-red-500');
+                                    }
+                                } else {
+                                    const userAnswer = document.getElementById(`user-answer-${index}`).value.trim();
+                                    const correctAnswers = answer.split(',').map(option => option.trim());
+
+                                    const isCorrect = correctAnswers.some(correctAnswer => userAnswer === correctAnswer);
+
+                                    if (isCorrect) {
+                                        feedback.textContent = 'Correct';
+                                        feedback.classList.add('text-green-500');
+
+                                        totalScore++;
+                                        document.getElementById('score').textContent = `Score: ${totalScore}`;
+                                    } else {
+                                        feedback.textContent = 'Wrong';
+                                        feedback.classList.add('text-red-500');
+                                    }
+                                }
+
+                                if (index === data.questions.length - 1) {
+                                    isQuizSubmitted = true;
+                                    submitButton.textContent = 'Retry Quiz';
+                                    submitButton.removeEventListener('click', null);
+                                    submitButton.addEventListener('click', retryQuiz);
+                                }
+                            }
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching questions:', error);
+                });
+        });
+
+        document.getElementById('cancel-questions').addEventListener('click', () => {
+            closePopup('questions-popup');
+        });
+
+        const retryQuiz = () => {
+            totalScore = 0;
+            isQuizSubmitted = false;
+            document.getElementById('score').textContent = 'Score: 0';
+
+            const questionsContent = document.getElementById('questions-content');
+            questionsContent.innerHTML = '';
+
+            const submitButton = document.getElementById('submit-quiz');
+            submitButton.textContent = 'Submit Quiz';
+            submitButton.removeEventListener('click', retryQuiz);
+
+            startButton.click();
+        };
+    </script>
+</body>
+
+</html>

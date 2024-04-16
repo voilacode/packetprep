@@ -11,7 +11,31 @@
 
     <link href="../dist/output.css" rel="stylesheet">
     <title>Full stack Java | PacketPrep</title>
-    
+    <style>
+    @keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    overflow: hidden;
+}
+
+.grid-container img {
+    grid-column: span 1;
+    grid-row: span 1;
+    animation: slide 10s linear infinite alternate; /* Make animation alternate */
+}
+
+    </style>
 </head>
 <body>
 <!---header-->
@@ -50,16 +74,16 @@
                 <div class="py-2 mx-auto my-auto bg-white rounded lg:inline-flex lg:w-auto lg:mt-0 lg:bg-inherit sm:px-0 ms-2 sm:ms-0 me-2 sm:me-0"
                     id="mainMenu">
                     <ul
-                        class="flex flex-col w-full space-y-0.5 lg:w-auto lg:flex-row lg:space-y-0  lg:space-x-1 transition-all duration-300 ease-in-out font-afacad text-lg[px] ls-2 my-auto mx-auto sm:ms-3 lg:ms-0">
+                        class="flex flex-col w-full space-y-0.5 lg:w-auto lg:flex-row lg:space-y-0  xl:space-x-1 transition-all duration-300 ease-in-out font-afacad text-lg[px] ls-2 my-auto mx-auto sm:ms-3 lg:ms-0">
                         <li class="">
                             <a href="./index.html"
-                                class="flex px-4 py-2 text-gray-500 duration-300 ease-in-out rounded-md lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                class="flex px-4 py-2 text-gray-500 duration-300 ease-in-out rounded-md lg:px-2 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
                                 Home
                             </a>
                         </li>
                         <li class="relative">
                             <button
-                                class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none focus:outline-none lg:hover:text-white lg:text-gray-300 hover:text-blue-500"
+                                class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none lg:px-2 focus:outline-none lg:hover:text-white lg:text-gray-300 hover:text-blue-500"
                                 id="dropdownToggle1">
                                 Job Training<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -99,7 +123,7 @@
                         </li>
                         <li class="relative">
                             <button href="#"
-                                class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none lg:text-gray-300 focus:outline-none lg:hover:text-white hover:text-blue-500"
+                                class="flex w-full px-4 py-2 text-gray-500 rounded-md outline-none lg:px-2 lg:text-gray-300 focus:outline-none lg:hover:text-white hover:text-blue-500"
                                 id="dropdownToggle">
                                 Resources<svg class="w-3 h-3 ml-1.5 mt-2" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -142,13 +166,25 @@
                         </li>
                         <li class="">
                             <a href="./hire-from-us.html"
-                                class="flex px-4 py-2 text-gray-500 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                class="flex px-4 py-2 text-gray-500 lg:px-2 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
                                 Hire from us!
                             </a>
                         </li>
                         <li>
+                            <a href="/login"
+                                class="flex px-4 py-2 text-gray-500 lg:px-2 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                $login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/register"
+                                class="flex px-4 py-2 text-gray-500 lg:px-2 lg:text-gray-300 lg:hover:text-white hover:text-blue-500">
+                                $register
+                            </a>
+                        </li>
+                        <li>
                             <a href="./contactus.html"
-                                class="button bg-[#ED4C78] px-5 py-2.5 rounded hover:translate-y-[-4px] duration-500  text-sm font-semibold mx-3 lg:mx-0 lg:my-auto mb-2 lg:mb-0 block my-8">Talk
+                                class="button bg-[#ED4C78] px-5 py-2.5 rounded hover:translate-y-[-4px] duration-500 text-sm font-semibold mx-3 lg:mx-0 lg:my-auto mb-2 lg:mb-0 block my-2 text-center w-fit">Talk
                                 to us</a>
 
                         </li>
@@ -160,16 +196,16 @@
 </header>
 <!----header closed-->
 <!----Fullstack Java--1-->
-<section class="bg-white lg:py-20 lg:px-20">
-  <div class="flex  mx-auto max-w-screen-xl lg:px-5 lg:pt-16">
-<div class=" grid lg:grid-cols-6 grid-cols-1 ">
+<section class="bg-white lg:py-20 lg:px-12 py-20 px-10 mx-auto max-w-screen-xl">
+  <div class="flex  mx-auto max-w-screen-xl md:px-5 md:pt-16 pt-10 ">
+<div class=" grid lg:grid-cols-6 gap-3 grid-cols-1 ">
 <!--1-->
-<div class="col-span-4">
+<div class="col-span-3">
     <!------>
-    <div class="flex w-80 h-10 gap-2 bg-slate-100 py-2 px-4 rounded-full shadow-md ">
+    <div class="flex lg:justify-start justify-center   w-80 h-10 gap-2 bg-slate-100 py-2 px-4 rounded-full shadow-md ">
 <img src="../assets/Google-Symbol.png" class="w-6 h-6" alt="google icon"/>
 <img src="https://www.odinschool.com/hubfs/OdinSchool_V3/icons/4.7_Rating.svg" class="" alt="google icon"/>
-<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb916c2ed5ff65:0x8c672557b26d8d6d?source=g.page.default" class="text-base font-sans text-gray-900 underline font-medium">4.5 | 634 Reviews</a>
+<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb916c2ed5ff65:0x8c672557b26d8d6d?source=g.page.default" class="md:text-base text-xs font-sans text-gray-900 underline font-medium">4.5 | 634 Reviews</a>
     </div>
     <!------->
 <h1 class="mt-5 mb-3 lg:text-6xl md:text-4xl text-3xl font-sans tracking-normal line-clamp-6 leading-normal font-semibold">Fullstack Java
@@ -177,28 +213,28 @@
     <p class="text-lg mt-10 font-normal text-slate-400">PacketPrep</p>
     <button class="px-12 py-3 mt-5 text-lg font-medium text-white duration-300 ease-in-out transform hover:scale-90 rounded md:text-xl bg-rose-500 ">Enroll Now</button>
 <!----->
-<div class="flex gap-4 py-4">
+<div class="grid md:grid-cols-4 grid-cols-2  gap-5 py-5">
 <!---1-->
-<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer w-40 h-44 flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
-    <img src="../assets/online-classroommode.webp" class="w-20 h-20"/>
+<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer md:w-36 md:h-36 w-32 h-36  flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
+    <img src="../assets/online-classroommode.webp" class="w-16 h-16"/>
     <p class="font-serif text-sm">Online & Classroom</p>
 
 </div>
 <!---2-->
-<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer w-40 h-44 flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
-    <img src="../assets/job_offer.png" class="w-20 h-20"/>
+<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer md:w-36 md:h-36 w-32 h-36  flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
+    <img src="../assets/job_offer.png" class="w-16 h-16"/>
     <p class="font-serif text-sm text-center">Unlimited Job Opportunities</p>
 
 </div>
 <!---3-->
-<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer w-40 h-44 flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
-    <img src="../assets/realtime_projects.png" class="w-20 h-20"/>
+<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer md:w-36 md:h-36 w-32 h-36  flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
+    <img src="../assets/realtime_projects.png" class="w-16 h-16"/>
     <p class="font-serif text-sm">Realtime Projects</p>
 
 </div>
 <!---4-->
-<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer w-40 h-44 flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
-    <img src="../assets/mock_interviews.png" alt="Mock logo" class="w-20 h-20"/>
+<div class="bg-blue-50  duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer md:w-36 md:h-36 w-32 h-36  flex flex-col justify-center gap-4 shadow-xl items-center rounded-xl p-3">
+    <img src="../assets/mock_interviews.png" alt="Mock logo" class="w-16 h-16"/>
     <p class="font-serif text-sm">Mock Interviews</p>
 
 </div>
@@ -208,17 +244,17 @@
 </div>
 
 <!--2--->
-<div class="col-span-2">
+<div class="col-span-3">
     <img src="../assets/typing" alt="laptop" class="mt-24 rounded-xl " width="550px"></div>
 </div>
   </div>  
 
 </section>
- <section class="bg-blue-50 lg:py-16 lg:px-20 ">
-<h1 class="text-center font-semibold lg:text-5xl text-3xl">Our students are placed in</h1>
-<div class="mx-auto max-w-screen-xl lg:px-12 lg:pt-10">
+ <section class="  lg:px-20 py-10 px-5 ">
+<h1 class="text-center font-semibold lg:text-5xl md:text-3xl text-2xl">Our students are placed in</h1>
+<div class="mx-auto max-w-screen-xl lg:px-12 lg:pt-10 pt-5">
    
-    <div class="grid md:grid-cols-6 grid-cols-3 gap-8  justify-center lg:py-10 ">
+    <div class="grid md:grid-cols-6 grid-cols-3 gap-8  justify-center lg:py-10  grid-container">
 <img src="../assets/tata.webp" class="col-span-1" width="120px" height="auto" alt="tata"
     aria-label="tata">
 <img src="../assets/file_wipro-min.webp" class="col-span-1" width="120px" height="auto" alt="wipro"
@@ -451,217 +487,246 @@
 
 
 <!---course curriculum-->
-<section class="lg:py-20 lg:px-20">
-<div class="grid lg:grid-cols-6 px-5 mx-auto max-w-screen-xl ">
-<div class="lg:col-span-4 border border-indigo-500 rounded-md">
- <p class="bg-purple-500 m-5 py-2 rounded-xl px-2 text-white text-center text-lg w-40 relative bottom-10">Learning Modules</p>
-<!---->
-<div class="grid grid-cols-6 p-10 relative bottom-10">
-<div class="col-span-1">
-<img src="../assets/book.svg"/>
-<div class="w-1 h-60 bg-black ml-2"></div>
-<img src="../assets/Tools.svg"/>
-<div class="w-1 h-44 bg-black ml-2"></div>
-<img src="../assets/Projects.svg"/>
-</div>
-<div class="col-span-5">
-    <h4 class="text-xl font-medium">Topics Covered</h4>
-    
-    <div class="grid grid-cols-5 justify-between py-8 gap-6">
-        <img src="../assets/html.png" class="w-16 h-16"/>
-        <img src="../assets/css.jpg" class="w-16 h-16"/>
-        <img src="../assets/bootstrap.jpeg" class="w-16 h-16"/>
-        <img src="../assets/javaScript.png" class="w-16 h-16"/>
-        <img src="../assets/reactjs.png" class="w-16 h-16"/>
-        <img src="../assets/sql.png" class="w-16 h-16"/>
-        <img src="../assets/javalogo.svg" class="w-16 h-16"/>
-        <img src="../assets/Advanced-java.png" class="w-16 h-16"/>
-        <img src="../assets/spring-framework.png" class="w-16 h-16"/>
-                   </div>
+<section class="lg:py-20 lg:px-20 md:px-10 py-10  flex justify-center">
+<div class=" mx-auto max-w-screen-xl flex justify-center">
+    <div class="grid lg:grid-cols-6 lg:gap-6 gap-5 justify-centerlg:  px-5">
 
-        <h4 class="text-xl font-medium">Tools</h4>
-        <div class="grid grid-cols-5 justify-between py-8 gap-6">
-            <img src="../assets/gitimg.webp" class="w-16 h-16"/>
-            <img src="../assets/postmanimg.png" class="w-16 h-16"/>
-            <img src="../assets/vscodeimg.png" class="w-16 h-16"/>
-            <img src="../assets/chatgptimg.webp" class="w-16 h-16"/>
-            
+
+        <div class="lg:col-span-4 border border-blue-500 rounded-xl">
+     <p class="bg-purple-500 m-5 py-2 rounded-xl px-2 text-white text-center text-lg w-40 relative bottom-10">Learning Modules</p>
+    <!---->
+    <div class="grid grid-cols-6 justify-center px-10  py-2 relative bottom-10 mx-auto max-w-screen-xl">
+    <div class="col-span-1">
+    <img src="../assets/book.svg"/>
+    <div class="w-1 h-60 bg-black ml-2"></div>
+    <img src="../assets/Tools.svg"/>
+    <div class="w-1 h-32 bg-black ml-2"></div>
+    <img src="../assets/Projects.svg"/>
+    </div>
+    <div class="col-span-5">
+        <h4 class="text-xl font-medium">Topics Covered</h4>
+        
+        <div class="grid md:grid-cols-5 grid-cols-5 justify-between py-8 md:gap-6 gap-2 items-center">
+            <img src="../assets/html.png" class="w-16 h-16"/>
+            <img src="../assets/css.jpg" class="w-20 h-16"/>
+            <img src="../assets/bootstrap.jpeg" class="w-10 h-10"/>
+            <img src="../assets/javaScript.png" class="w-20 h-16"/>
+            <img src="../assets/reactjs.png" class="w-16 h-16"/>
+            <img src="../assets/sql.png" class="w-20 h-16"/>
+            <img src="../assets/javalogo.svg" class="w-16 h-16"/>
+            <img src="../assets/Advanced-java.png" class="w-2 h-2"/>
+            <img src="../assets/spring-framework.png" class="w-2 h-2"/>
                        </div>
-                       <h4 class="text-xl py-10 font-medium">Projects
-                    </h4>
-                       <div class="grid grid-cols-5 justify-between  gap-6">
-                        <div class="border p-3 rounded-xl"><img src="../assets/resumeimg.png" class="w-16 h-16"></div>
-                        
-                        <!---2-->
-                    <div class="border p-3 rounded-xl"><img src="../assets/project1.png" class="w-16 h-16"></div>
-                        
-                        
-               
-                                <div class="border p-3 rounded-xl"><img src="../assets/project2.png" class="w-16 h-16"></div>
-                            
-                    <!--4-->
-                    
-                    
-                        <div class="border p-3 rounded-xl"><img src="../assets/sqlproimg.webp" class="w-16 h-16"></div>
-                    
-                    <!--5-->
-                    
-                    
-                        <div class="border p-3 rounded-xl"><img src="../assets/project5.jpeg" class="w-16 h-16"></div>
-                    
-                     <!--6-->
-                   
-                                             <div class="border p-3 rounded-xl"><img src="../assets/project6.jpeg" class="w-16 h-16"></div>
-                    
-                    <!--7-->
-                   
-                        <div class="border p-3 rounded-xl"><img src="../assets/project7.png" class="w-16 h-16"></div>
-                    
-                    
-                   
-                    <!---8-->
-                    
-                     
-                    
-                        <div class="border p-3 rounded-xl"><img src="../assets/project8.png" class="w-16 h-16"></div>
-                    
-                    
-                    
-                  
-                    
-                    
-                        <div class="border p-3 rounded-xl"><img src="../assets/project9.png" class="w-16 h-16"></div>
-
-                        <div class="border p-3 rounded-xl"><img src="../assets/project10.png" class="w-16 h-16"></div>
-                   
-                                      </div>
-
     
+            <h4 class="text-xl font-medium">Tools</h4>
+            <div class="grid grid-cols-4 justify-between items-center py-8 gap-6">
+                <img src="../assets/gitimg.webp" class="w-16 h-16"/>
+                <img src="../assets/postmanimg.png" class="w-16 h-16"/>
+                <img src="../assets/vscodeimg.png" class="w-16 h-16"/>
+                <img src="../assets/chatgptimg.webp" class="w-16 h-16"/>
+                
+                           </div>
+                           <h4 class="text-xl  pb-5 font-medium">Projects
+                        </h4>
+                           <div class="grid md:grid-cols-3 grid-cols-2 justify-between  gap-6">
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">Resume Webpage</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">CRUD Operations</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">API Webapp</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">Onepage Website</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">Employee Records</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">DBC Web Conn</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">Responsive Website</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">Calculator Webapp</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">Social Webapp</li>
+                        <li class="md:text-base lg:text-base text-xs text-slate-500 hover:text-blue-500 cursor-pointer ">REST API Application</li>
+    
+                    </div>
+        </div>
+     
     </div>
     
     </div>
- 
+    <div class="lg:col-span-2 bg-blue-50 rounded-xl p-5">
+    <div class="border flex gap-2 border-indigo-500 rounded-full py-3 px-2">
+       <img src="../assets/stat.png" class="w-5 h-5"/>
+        <p class="text-sm">Get placement opportunities up to 2 years!</p>
+    </div>
+    <h1 class=" mt-4 text-2xl font-semibold">Prep well for your dream job</h1>
+    <p class="mt-5 font-sans text-base ">Get ready to excel in your dream career. Receive thorough job readiness training alongside technical instruction, ensuring you're fully prepared for opportunities upon completion of your training</p>
+    <h6 class="font-medium text-lg mt-5">Full-Stack Java Development Training and Placement Program</h6>
+    <div class="flex gap-2 pt-10">
+    <img src="../assets/Workshop.webp"/>
+    <p class="text-lg font-medium">get project presentation guidance</p>
+    </div>
+    <div class="flex gap-2 mt-8">
+        <img class="w-10 h-10" src="../assets/placementsassitene.webp"/>
+        <p class="text-lg font-medium">Placement Assistance</p>
+        </div>
+    
+        <div class="flex gap-2 mt-8">
+            <img class="w-10 h-10" src="../assets/project.png"/>
+            <p class="text-lg font-medium">10 Real-Time Projects</p>
+            </div>
+            <div class="flex gap-2 mt-8">
+                <img class="w-10 h-10" src="../assets/itest.png"/>
+                <p class="text-lg font-medium">Weekly Mocks & Tests</p>
+                </div>
+                <div class="flex gap-2 mt-8">
+                    <img class="w-10 h-10" src="../assets/quality.png"/>
+                    <p class="text-lg font-medium">Quality Assurance:</p>
+                    </div>
+                    
+    </div>
+    </div>
+</div>
+
+</section>
+            
+<div class="bg-blue-50">
+    <section class="max-w-screen-xl p-4 py-10 mx-auto sm:px-16">
+        <h1 class="pb-4 text-3xl font-semibold text-center title">Why Choose Packetprep ?</h1>
+
+        <div class="grid grid-cols-3 gap-4 py-5">
+            <div class="py-3">
+                <h1 class="text-xl font-semibold text-center">Points of Contrast</h1>
+            </div>
+            <div class="py-3">
+                <h1 class="text-xl font-semibold text-center">PacketPrep</h1>
+            </div>
+            <div class="py-3">
+                <h1 class="text-xl font-semibold text-center">Others</h1>
+            </div>
+            <div class="py-1 font-serif text-lg text-center">
+                Day1 Placements
+            </div>
+            <div class="py-1 flex justify-center text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+            </div>
+            <div class="py-1 flex justify-center text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <!-- Continue adding rows similarly -->
+<div class="py-1 font-serif text-lg text-center">
+    2 Years Support
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+</div>
+
+<div class="py-1 font-serif text-lg text-center">
+    Reject Offer & attend next drives
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+</div>
+
+<div class="py-1 font-serif text-lg text-center">
+    Recorded Videos
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+</div>
+<div class="py-1 font-serif text-lg text-center">
+    Installment Option
+
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+</div>
+<div class="py-1 font-serif text-lg text-center">
+    Assesment and Mocks
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
+</div>
+<div class="py-1 font-serif text-lg text-center">
+    Real time Projects
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <h1 class="flex justify-center py-1 text-xl font-semibold text-green-400">
+        10
+
+     </h1>
+    
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <h1 class="flex justify-center py-1 text-xl text-red-400">1 or 2
+    </h1>
+</div>
+<div class="py-1 font-serif text-lg text-center">
+    Doubt Sections
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+</div>
+<div class="py-1 flex justify-center text-xl">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    </svg>
 </div>
 </div>
 </section>
-            
-<!--Why Choose Packetprep-->
-<div class="bg-blue-50">
-    <section class="max-w-screen-xl p-4 py-8 mx-auto sm:px-16">
-        <h1 class="pb-4 text-3xl font-semibold text-center title">Why Choose Packetprep</h1>
 
-        <div class="grid justify-start grid-cols-3">
-            <h1 class="py-3 text-xl font-semibold text-center  md:text-2xl">Points of Contrast</h1>
-            <h1 class="py-3 text-xl font-semibold text-center  md:text-2xl">PacketPrep</h1>
-            <h1 class="py-3 text-xl font-semibold text-center  md:text-2xl">Others</h1>
-            <h1 class="py-3 font-serif text-lg text-center">Day1 Placements</h1>
-            <h1 class="flex justify-center py-1 text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
+<!-- Add more rows as needed -->
 
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </h1>
-            <h1 class="py-1 font-serif text-lg text-center">2 Years Support</h1>
-            <h1 class="flex justify-center py-1 text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
+     
+</div>
 
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </h1>
-            <h1 class="py-1 font-serif text-lg text-center">Reject Offer & attend next drives</h1>
-            <h1 class="flex justify-center py-1 text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </h1>
-            <h1 class="py-1 font-serif text-lg text-center">Recorded Videos</h1>
-            <h1 class="flex justify-center py-1 text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </h1>
-            <h1 class="py-1 font-serif text-lg text-center">Installment Option</h1>
-            <h1 class="flex justify-center py-1 text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </h1>
-            <h1 class="py-1 font-serif text-lg text-center">Assesment and Mocks</h1>
-            <h1 class="flex justify-center py-1 text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </h1>
-            <h1 class="py-1 font-serif text-lg text-center">Real time Projects</h1>
-            <h1 class="flex justify-center py-1 text-xl font-semibold text-green-400">
-               10
-
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl text-red-400">1 or 2
-            </h1>
-            <h1 class="py-1 font-serif text-lg text-center">Doubt Sections</h1>
-            <h1 class="flex justify-center py-1 text-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5 p-1 text-white font-bold bg-green-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-
-            </h1>
-            <h1 class="flex justify-center py-1 text-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="w-5 h-5 p-1 text-white bg-red-400 rounded-full">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-            </h1>
-        </div>
-        </section>
-        </div>
             <!--faq-->
     <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
         <h1 class="my-4 text-2xl font-semibold text-center md:text-3xl">Frequently Asked Questions

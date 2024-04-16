@@ -4960,6 +4960,10 @@ video {
     height: 600px;
   }
 
+  .md\:h-44 {
+    height: 11rem;
+  }
+
   .md\:max-h-80 {
     max-height: 20rem;
   }
@@ -4974,6 +4978,10 @@ video {
 
   .md\:w-\[300px\] {
     width: 300px;
+  }
+
+  .md\:w-40 {
+    width: 10rem;
   }
 
   .md\:grid-cols-1 {
@@ -5046,6 +5054,10 @@ video {
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:gap-2 {
+    gap: 0.5rem;
   }
 
   .md\:p-10 {

@@ -1,0 +1,1 @@
+.hp_slider-cover{align-items:center;display:flex;justify-content:center;margin:0}@keyframes scroll{0%{transform:translateX(0)}to{transform:translateX(-1500px)}}.hp_slider{height:400px;margin:auto;overflow:hidden;position:relative;width:100vw}.hp_slider .hp_slide-track{animation:scroll 40s linear infinite;display:flex;width:3000px}.hp_slider .hp_slide{height:400px;width:300px}
