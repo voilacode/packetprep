@@ -1413,14 +1413,6 @@ video {
   width: 100vw;
 }
 
-.w-60 {
-  width: 15rem;
-}
-
-.w-0 {
-  width: 0px;
-}
-
 .min-w-full {
   min-width: 100%;
 }
@@ -1805,10 +1797,6 @@ video {
 
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -3749,6 +3737,10 @@ video {
   line-height: 1.25;
 }
 
+.leading-loose {
+  line-height: 2;
+}
+
 .tracking-normal {
   letter-spacing: 0em;
 }
@@ -4319,6 +4311,12 @@ video {
 
 .transition-transform {
   transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-shadow {
+  transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
