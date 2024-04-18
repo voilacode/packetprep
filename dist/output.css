@@ -4730,6 +4730,10 @@ video {
     display: block;
   }
 
+  .sm\:inline {
+    display: inline;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -4939,6 +4943,10 @@ video {
 
   .md\:block {
     display: block;
+  }
+
+  .md\:inline {
+    display: inline;
   }
 
   .md\:flex {
@@ -5197,6 +5205,10 @@ video {
     text-align: left;
   }
 
+  .md\:text-center {
+    text-align: center;
+  }
+
   .md\:text-start {
     text-align: start;
   }
@@ -5352,6 +5364,10 @@ video {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:inline {
+    display: inline;
   }
 
   .lg\:flex {
@@ -5680,6 +5696,10 @@ video {
 
   .lg\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 
   .lg\:text-2xl {
