@@ -12,7 +12,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="../dist/output.css" rel="stylesheet">
     <title>Full stack Python | PacketPrep</title>
+    <style>
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
 
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .grid-container img {
+            grid-column: span 1;
+            grid-row: span 1;
+            animation: slide 10s linear infinite alternate;
+            /* Make animation alternate */
+        }
+
+    </style>
 </head>
 
 <body>
@@ -91,7 +117,7 @@
                                                 <li>
                                                     <a href="./software-testing.html"
                                                         class="block py-1 text-gray-500 hover:text-blue-600">
-                                                      SoftwareTesting with placement
+                                                        SoftwareTesting with placement
                                                     </a>
                                                 </li>
                                             </ul>
@@ -177,7 +203,7 @@
     <div class="max-w-screen-xl p-4 py-8 mx-auto pt-28 sm:px-16">
         <div class="flex items-center justify-between gap-4 ">
             <!--1-->
-            <div >
+            <div>
                 <!------>
                 <div
                     class="flex justify-center h-10 gap-2 px-4 py-2 rounded-full shadow-md lg:justify-start w-80 bg-slate-100 ">
@@ -191,16 +217,18 @@
                 <!------->
                 <h1
                     class="mt-5 mb-3 font-sans text-3xl font-semibold leading-normal tracking-normal text-center lg:text-6xl md:text-4xl line-clamp-6 md:text-start">
-                   <span class="text-blue-900">Fullstack </span><span class="font-serif text-yellow-500">Python</span><br>
+                    <span class="text-blue-900">Fullstack </span><span
+                        class="font-serif text-yellow-500">Python</span><br>
                     with Placements</h1>
                 <p class="mt-10 text-lg font-normal text-center text-slate-400 md:text-start">PacketPrep</p>
                 <div class="flex justify-center md:justify-start">
-                <button
-                    class="px-12 py-3 mt-5 text-lg font-medium text-white duration-300 ease-in-out transform rounded hover:scale-90 md:text-xl bg-rose-500 ">
-                    <a href="../src/contactus.html">Enroll
-                        Now</a></button></div>
+                    <button
+                        class="px-12 py-3 mt-5 text-lg font-medium text-white duration-300 ease-in-out transform rounded hover:scale-90 md:text-xl bg-rose-500 ">
+                        <a href="../src/contactus.html">Enroll
+                            Now</a></button></div>
                 <!----->
-                <div class="grid items-center justify-center grid-cols-2 gap-5 py-5 ml-8 md:ml-0 md:grid-cols-2 lg:grid-cols-4">
+                <div
+                    class="grid items-center justify-center grid-cols-2 gap-5 py-5 ml-8 md:ml-0 md:grid-cols-2 lg:grid-cols-4">
                     <!---1-->
                     <div
                         class="flex flex-col items-center justify-center w-32 gap-4 p-3 duration-300 ease-in-out transform shadow-xl cursor-pointer bg-blue-50 hover:-translate-y-1 md:w-36 md:h-36 h-36 rounded-xl">
@@ -241,11 +269,13 @@
     </div>
 
 
-     <!--companies-->
-     <section class="max-w-screen-xl p-4 py-8 mx-auto sm:px-16">
-        <h1 class="text-4xl font-semibold text-center">Our students are placed in</h1>
-        <div class="px-4 sm:px-16">
-            <div class="grid grid-cols-3 gap-6 mt-8 md:grid-cols-6 md:gap-4">
+    <!--companies-->
+    <section class="pt-20 ">
+        <h1 class="text-2xl font-semibold text-center lg:text-5xl md:text-3xl">Our students are placed in</h1>
+        <div class="items-center justify-between max-w-screen-xl p-4 mx-auto sm:px-16 ">
+            <!--text-->
+
+            <div class="grid justify-center grid-cols-3 gap-8 md:grid-cols-6 lg:py-10 grid-container">
                 <img src="../assets/tata.webp" class="col-span-1" width="120px" height="auto" alt="tata"
                     aria-label="tata">
                 <img src="../assets/file_wipro-min.webp" class="col-span-1" width="120px" height="auto" alt="wipro"
@@ -296,10 +326,12 @@
                     aria-label="invesco">
             </div>
         </div>
+
+        </div>
     </section>
 
 
-    
+
     <!--why Packetprep-->
     <div class="py-10 bg-blue-50">
         <section class="max-w-screen-xl p-4 py-8 mx-auto sm:px-16">
@@ -442,102 +474,125 @@
     </div>
 
 
-       <!---course curriculum-->
-       <section class="max-w-screen-xl p-4 py-10 mx-auto sm:px-16">
-        <div class="flex justify-center max-w-screen-xl ">
-            <div class="grid gap-5 lg:grid-cols-6 lg:gap-6 justify-centerlg:">
+    <!---course curriculum-->
+    <section class="p-4 py-5 container-fluid lg:py-12 lg:px-12">
+        <div class="max-w-screen-xl p-4 py-10 mx-auto sm:px-16">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-6">
 
-
-                <div class="border border-blue-500 lg:col-span-4 rounded-xl">
-                    <p
-                        class="relative w-40 px-2 py-2 m-5 text-lg text-center text-white bg-purple-500 rounded-xl bottom-10">
-                        Learning Modules</p>
-                    <!---->
-                    <div class="relative grid justify-center max-w-screen-xl grid-cols-6 px-10 py-2 mx-auto bottom-10">
-                        <div class="col-span-1">
-                            <img src="../assets/book.svg" />
-                            <div class="w-1 ml-2 bg-black lg:h-[340px] h-[360px] md:h-[460px]"></div>
-                            <img src="../assets/Tools.svg" />
-                            <div class="w-1 h-64 ml-2 bg-black lg:h-44 md:h-52"></div>
-                            <img src="../assets/Projects.svg" />
+                <!---1-->
+                <div class="col-span-1 p-3 border border-indigo-700 lg:col-span-4 rounded-xl md:p-6">
+                    <div
+                        class="relative px-3 py-2 text-lg text-white bg-indigo-500 shadow-md w-44 bottom-10 rounded-xl">
+                        Learning Modules</div>
+                    <!-------innrerdiv1-->
+                    <!---1-->
+                    <div class="px-3">
+                        <!---1-->
+                        <div class="flex gap-7 ">
+                            <div>
+                                <img src="../assets/book.svg" class="mt-2" />
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-medium">Topics Covered</h4>
+                            </div>
                         </div>
-                        <div class="col-span-5">
-                            <h4 class="text-xl font-medium">Topics Covered</h4>
-
+                        <!--2-->
+                        <div class="flex gap-8 md:gap-10 ">
+                            <div>
+                                <div class="ml-2 border-l border-gray-500 md:h-52 h-72"></div>
+                            </div>
                             <div
-                                class="grid items-center justify-between grid-cols-3 gap-2 py-8 md:grid-cols-4 md:gap-6 lg:grid-cols-5">
-                                <div >
-                                <img src="../assets/html.png" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/css.jpg" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/bootstrap.jpeg" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/javaScript.png" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/reactjs.png" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/mysql.png" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/python-logo.png" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/adv_python.jpeg" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/django.jpg" class="object-cover w-auto" />
-                            </div>
-                            </div>
-
-                            <h4 class="text-xl font-medium">Tools</h4>
-                            <div class="grid items-center justify-between grid-cols-3 gap-2 py-8 md:grid-cols-4 md:gap-6 lg:grid-cols-5">
-                                <div>
-                                <img src="../assets/gitimg.webp" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/linux.png" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/vscodeimg.png" class="object-cover w-auto" />
-                            </div>
-                            <div>
-                                <img src="../assets/chatgptimg.webp" class="object-cover w-auto" />
-                            </div>
+                                class="grid justify-between grid-cols-3 py-5 sm:grid-cols-5 md:grid-cols-5 lg:gap-x-12 md:gap-x-10 gap-x-4 md:gap-y-6 gap-y-4">
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"><img
+                                        src="../assets/html.png" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/css.png" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"><img
+                                        src="../assets/bootstrap.jpeg" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/javaScript.png" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/reactjs.png" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/sqlimg.png" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/python-logo.png" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/adv_python.jpeg" class="w-12 h-12" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/django.jpg" class="w-12 h-12" /></div>
 
                             </div>
-                            <h4 class="pb-5 text-xl font-medium">Projects
-                            </h4>
+
+                        </div>
+                        <!---3-->
+                        <div class="flex gap-7 ">
+                            <div>
+                                <img src="../assets/Tools.svg" class="mt-2" />
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-medium">Tools </h4>
+                            </div>
+                        </div>
+
+
+                        <!--5-->
+                        <div class="flex gap-8 md:gap-10">
+                            <div>
+                                <div class="h-48 ml-2 border-l border-gray-500 md:h-28"></div>
+                            </div>
+                            <div
+                                class="grid justify-between grid-cols-3 py-5 md:grid-cols-5 lg:gap-x-12 md:gap-x-10 gap-x-4 md:gap-y-6 gap-y-4">
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"><img
+                                        src="../assets/gitimg.webp" class="w-10 h-10" /></div>
+
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"><img
+                                        src="../assets/vscodeimg.png" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/chatgptimg.webp" class="w-10 h-10" /></div>
+                                <div class="flex justify-center h-16 p-2 border rounded-lg"> <img
+                                        src="../assets/linux.png" class="w-10 h-10" /></div>
+                            </div>
+
+                        </div>
+                        <!---3-->
+                        <div class="flex gap-7 ">
+                            <div>
+                                <img src="../assets/Projects.svg" class="mt-2" />
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-medium">Projects </h4>
+                            </div>
+                        </div>
+                        <!--8-->
+                        <!--5-->
+                        <div class="flex gap-8 py-4 pl-10 md:gap-10">
+
                             <div class="grid justify-between grid-cols-2 gap-6 md:grid-cols-3">
                                 <li
                                     class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
                                     Resume Webpage</li>
                                 <li
                                     class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
-                                     Onepage Website</li>
-                                <li
-                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
-                                    Responsive Website</li>
-                                <li
-                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
                                     CRUD Operations</li>
-                                <li
-                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
-                                    Employee Records</li>
-                                <li
-                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
-                                    Calculator Webapp</li>
                                 <li
                                     class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
                                     API Webapp</li>
                                 <li
                                     class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
-                                    SQL Web Connection</li>
+                                    Onepage Website</li>
+                                <li
+                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
+                                    Employee Records</li>
+                                <li
+                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
+                                    DBC Web Conn</li>
+                                <li
+                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
+                                    Responsive Website</li>
+                                <li
+                                    class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
+                                    Calculator Webapp</li>
                                 <li
                                     class="text-xs cursor-pointer md:text-base lg:text-base text-slate-500 hover:text-blue-500 ">
                                     Social Webapp</li>
@@ -546,45 +601,52 @@
                                     REST API Application</li>
 
                             </div>
-                        </div>
 
+                        </div>
                     </div>
+                    <!------>
 
                 </div>
+
                 <div class="p-5 lg:col-span-2 bg-blue-50 rounded-xl">
                     <div class="flex gap-2 px-2 py-3 border border-indigo-500 rounded-full">
                         <img src="../assets/stat.png" class="w-5 h-5" />
                         <p class="text-sm">Get placement opportunities up to 2 years!</p>
                     </div>
                     <h1 class="mt-4 text-2xl font-semibold ">Prep well for your dream job</h1>
-                    <p class="mt-5 font-sans text-base ">Start excelling in your dream career from day one of enrollment. Receive comprehensive job readiness training alongside technical instruction, ensuring you're fully prepared for opportunities as soon as you begin your training.</p>
+                    <p class="mt-5 font-sans text-base ">Start excelling in your dream career from day one of
+                        enrollment. Receive comprehensive job readiness training alongside technical instruction,
+                        ensuring you're fully prepared for opportunities as soon as you begin your training.</p>
                     <h6 class="mt-5 text-lg font-medium">Full-Stack Python Development Training and Placement Program</h6>
-                    <div class="flex gap-2 pt-10">
+                    <div class="flex gap-3 pt-6">
                         <img src="../assets/Workshop.webp" />
-                        <p class="text-lg font-medium">get project presentation guidance</p>
+                        <p class="text-base font-normal">get project presentation guidance</p>
                     </div>
-                    <div class="flex gap-2 mt-8">
+                    <div class="flex gap-3 mt-5">
                         <img class="w-10 h-10" src="../assets/placementsassitene.webp" />
-                        <p class="text-lg font-medium">Placement Assistance</p>
+                        <p class="text-base font-normal">Placement Assistance</p>
                     </div>
 
-                    <div class="flex gap-2 mt-8">
+                    <div class="flex gap-3 mt-5">
                         <img class="w-10 h-10" src="../assets/project.png" />
-                        <p class="text-lg font-medium">10 Real-Time Projects</p>
+                        <p class="text-base font-normal">10 Real-Time Projects</p>
                     </div>
-                    <div class="flex gap-2 mt-8">
+                    <div class="flex gap-3 mt-5">
                         <img class="w-10 h-10" src="../assets/itest.png" />
-                        <p class="text-lg font-medium">Weekly Mocks & Tests</p>
+                        <p class="text-base font-normal">Weekly Mocks & Tests</p>
                     </div>
-                    <div class="flex gap-2 mt-8">
+                    <div class="flex gap-3 mt-5">
                         <img class="w-10 h-10" src="../assets/quality.png" />
-                        <p class="text-lg font-medium">Quality Assurance</p>
+                        <p class="text-base font-normal">Quality Assurance</p>
+                    </div>
+                    <div class="flex gap-3 mt-5">
+                        <img class="w-10 h-10" src="../assets/day1.png" />
+                        <p class="text-base font-normal">Day One Placements</p>
                     </div>
 
                 </div>
             </div>
         </div>
-
     </section>
 
 
@@ -735,8 +797,8 @@
     </div>
 
 
-     <!--faq-->
-     <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
+    <!--faq-->
+    <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
         <h1 class="my-4 text-2xl font-semibold text-center md:text-3xl">Frequently Asked Questions
         </h1>
 
