@@ -1032,16 +1032,16 @@ video {
   margin-right: 1rem;
 }
 
+.ms-10 {
+  margin-inline-start: 2.5rem;
+}
+
 .ms-2 {
   margin-inline-start: 0.5rem;
 }
 
 .ms-5 {
   margin-inline-start: 1.25rem;
-}
-
-.ms-8 {
-  margin-inline-start: 2rem;
 }
 
 .ms-auto {
@@ -1102,10 +1102,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ms-10 {
-  margin-inline-start: 2.5rem;
 }
 
 .box-border {
@@ -1308,10 +1304,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-1 {
-  height: 0.25rem;
 }
 
 .w-1 {
@@ -4849,6 +4841,10 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:p-4 {
+    padding: 1rem;
   }
 
   .sm\:p-8 {
