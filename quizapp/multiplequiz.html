@@ -28,14 +28,14 @@
     </style>
 </head>
 
-<body class="bg-gray-200 flex flex-col justify-center items-center h-screen">
+<body class="flex flex-col items-center justify-center h-screen bg-gray-200">
     <div>
-        <h1 class="text-4xl font-semibold text-blue-900 mb-4">Welcome To the Quiz App</h1>
+        <h1 class="mb-4 text-4xl font-semibold text-blue-900">Welcome To the Quiz App</h1>
 
         <!-- User Name Input -->
         <div class="mb-4">
-            <label for="username" class="block text-xl font-bold mb-2">Enter Your Name:</label>
-            <input type="text" id="username" placeholder="Your Name" class="border border-gray-300 rounded-md p-2 w-full">
+            <label for="username" class="block mb-2 text-xl font-bold">Enter Your Name:</label>
+            <input type="text" id="username" placeholder="Your Name" class="w-full p-2 border border-gray-300 rounded-md">
         </div>
 
         <!-- Quiz Buttons -->
@@ -45,7 +45,7 @@
                 data-url="https://live-ai.s3.ap-south-1.amazonaws.com/test/co/coctqse029ed/coctqse029ed_questionbank.json?r=1"
                 data-score="true"
                 data-answers="true"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none mr-4">
+                class="px-4 py-2 mr-4 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none">
                 Start Quiz 1
             </button>
 
@@ -54,7 +54,7 @@
                 data-url="https://dummy-url-for-quiz2.json"
                 data-score="true"
                 data-answers="false"
-                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none mr-4">
+                class="px-4 py-2 mr-4 font-bold text-white bg-green-500 rounded hover:bg-green-700 focus:outline-none">
                 Start Quiz 2
             </button>
 
@@ -63,25 +63,25 @@
                 data-url="https://dummy-url-for-quiz3.json"
                 data-score="true"
                 data-answers="false"
-                class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                class="px-4 py-2 font-bold text-white bg-yellow-500 rounded hover:bg-yellow-700 focus:outline-none">
                 Start Quiz 3
             </button>
         </div>
 
         <!-- Popup for Questions -->
-        <div id="questions-popup" class="absolute inset-0 bg-black bg-opacity-75 flex justify-center hidden">
-            <div class="bg-white mt-10 mb-10 rounded-lg p-8 max-w-2xl overflow-y-auto max-h-screen popup-container">
-                <button id="cancel-questions" class="cancel-button hover:text-red-500 text-gray-600 font-bold pl-4 rounded focus:outline-none">
+        <div id="questions-popup" class="absolute inset-0 flex justify-center hidden bg-black bg-opacity-75">
+            <div class="max-w-2xl max-h-screen p-8 mt-10 mb-10 overflow-y-auto bg-white rounded-lg popup-container">
+                <button id="cancel-questions" class="pl-4 font-bold text-gray-600 rounded cancel-button hover:text-red-500 focus:outline-none">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
-                <h2 class="text-3xl font-semibold font-sans mb-4 bg-blue-100 h-20 flex justify-center items-center text-blue-500 m-2">Questions</h2>
-                <div id="questions-content" class="popup-content font-serif"></div>
-                <button id="submit-quiz" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                <h2 class="flex items-center justify-center h-20 m-2 mb-4 font-sans text-3xl font-semibold text-blue-500 bg-blue-100">Questions</h2>
+                <div id="questions-content" class="font-serif popup-content"></div>
+                <button id="submit-quiz" class="px-4 py-2 mt-4 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none">
                     Submit Quiz
                 </button>
-                <div id="score" class="text-lg font-bold mt-4"></div>
+                <div id="score" class="mt-4 text-lg font-bold"></div>
             </div>
         </div>
     </div>
@@ -129,12 +129,12 @@
                             });
                             optionsHtml += `</ul>`;
                         } else {
-                            optionsHtml += `<input type="text" id="user-answer-${index}" placeholder="Your Answer" class="border border-gray-300 rounded-md p-1 w-full mb-2">`;
+                            optionsHtml += `<input type="text" id="user-answer-${index}" placeholder="Your Answer" class="w-full p-1 mb-2 border border-gray-300 rounded-md">`;
                         }
     
                         questionElement.innerHTML = `
                         <div class="flex m-1.5 gap-2 text-gray-700">  
-                            <p class="bg-yellow-200 border  border-yellow-600 h-8 flex justify-center item-center rounded-md px-3 mb-1 ">${index + 1}</p>
+                            <p class="flex justify-center h-8 px-3 mb-1 bg-yellow-200 border border-yellow-600 rounded-md item-center ">${index + 1}</p>
                             <p class=""> ${qData.question}</p>
                         </div>
                
@@ -210,7 +210,7 @@
                     const questionsContent = document.getElementById('questions-content');
                     questionsContent.innerHTML = `
                         <p><strong>Question 1:</strong> This is a dummy question.</p>
-                        <input type="text" id="user-answer-1" placeholder="Your Answer" class="border border-gray-300 rounded-md p-1 w-full mb-2">
+                        <input type="text" id="user-answer-1" placeholder="Your Answer" class="w-full p-1 mb-2 border border-gray-300 rounded-md">
                         <div id="feedback-1" class="text-sm font-bold"></div>
                         <hr class="my-4">
                     `;
