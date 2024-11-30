@@ -4933,6 +4933,11 @@ video {
     padding-bottom: 2rem;
   }
 
+  .sm\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .sm\:ps-16 {
     padding-inline-start: 4rem;
   }
