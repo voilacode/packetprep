@@ -1,59 +1,3 @@
-async function handleFormSubmit(event, formId, url, popupId) {
-    event.preventDefault();
-
-    try {
-        // Initialize CSRF cookie on mobile devices
-        await fetch('/sanctum/csrf-cookie');
-
-        // Fetch CSRF token
-        const csrfResponse = await fetch('/csrf-token', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (!csrfResponse.ok) {
-            throw new Error('Failed to fetch CSRF token');
-        }
-
-        const csrfData = await csrfResponse.json();
-        const csrfToken = csrfData.csrfToken;
-
-        const formData = new FormData(document.getElementById(formId));
-
-        const requestOptions = {
-            method: 'POST',
-            headers: {
-                'X-CSRF-TOKEN': csrfToken,
-                'Accept': 'application/json'
-            },
-            body: formData
-        };
-
-        const response = await fetch(url, requestOptions);
-
-        if (response.ok) {
-            const responseData = await response.json();
-            console.log('Success response data:', responseData); // Log the response data
-
-            document.getElementById(popupId).classList.add('hidden');
-            document.getElementById('successPopup').classList.remove('hidden');
-
-        } else {
-            const errorData = await response.json();
-            console.error('Error in response:', errorData);
-            document.getElementById(popupId).classList.add('hidden');
-            document.getElementById('successPopup').classList.remove('hidden');
-        }
-
-    } catch (error) {
-        console.error('Caught network error:', error);
-        document.getElementById(popupId).classList.add('hidden');
-        document.getElementById('errorPopup').classList.remove('hidden');
-    }
-}
-
 async function handleForm(event, formId, url) {
     event.preventDefault();  // Prevent default form submission
 
@@ -62,7 +6,7 @@ async function handleForm(event, formId, url) {
         await fetch('/sanctum/csrf-cookie');
 
         // Fetch CSRF token
-        const csrfResponse = await fetch('/csrf-token', {
+        const csrfResponse = await fetch('/api/csrf', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
@@ -109,8 +53,6 @@ async function handleForm(event, formId, url) {
 
     } catch (error) {
         console.error('Caught error:', error);
-
-        // Show the error popup in case of failure
         document.getElementById('errorPopup').classList.remove('hidden');
     }
 }
@@ -124,18 +66,6 @@ function addFormListener(formId, handler) {
 }
 
 // Event listeners for each form
-addFormListener('demoForm', function (event) {
-    handleFormSubmit(event, 'demoForm', '/mail/demo', 'popup');
-});
-
-addFormListener('talk', function (event) {
-    handleFormSubmit(event, 'talk', '/mail/talk', 'talkForm');
-});
-
-addFormListener('request', function (event) {
-    handleFormSubmit(event, 'request', '/mail/request', 'requestForm');
-});
-
 addFormListener('apply', function (event) {
     handleForm(event, 'apply', '/admin/mail/apply/send');
 });
